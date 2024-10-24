@@ -10,29 +10,24 @@ using System.Windows.Forms;
 
 namespace DiemDanhSV.PAL.Forms
 {
-    public partial class FormDashboard : Form
+    public partial class FormAttendanceStudent : Form
     {
-        public FormDashboard()
+        public FormAttendanceStudent()
         {
             InitializeComponent();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void labelInput_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void guna2Button2_Click(object sender, EventArgs e)
+        private void txtboxCode_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtboxFile_TextChanged(object sender, EventArgs e)
+        private void labelSubject_Click(object sender, EventArgs e)
         {
 
         }
