@@ -44,6 +44,10 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             btnAttendance = new Guna.UI2.WinForms.Guna2Button();
             btnLogout = new Guna.UI2.WinForms.Guna2Button();
@@ -56,6 +60,8 @@
             role = new Label();
             username = new Label();
             pictureBox2 = new PictureBox();
+            txtboxFile = new Guna.UI2.WinForms.Guna2TextBox();
+            btnSelect = new Guna.UI2.WinForms.Guna2Button();
             guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             guna2Panel2.SuspendLayout();
@@ -216,7 +222,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.logo_dai_hoc_ton_duc_thang_dongphucvina_vn_;
-            pictureBox1.Location = new Point(46, -9);
+            pictureBox1.Location = new Point(32, -10);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(100, 101);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -268,12 +274,54 @@
             pictureBox2.TabIndex = 0;
             pictureBox2.TabStop = false;
             // 
+            // txtboxFile
+            // 
+            txtboxFile.BorderRadius = 10;
+            txtboxFile.CustomizableEdges = customizableEdges17;
+            txtboxFile.DefaultText = "select file Excel";
+            txtboxFile.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtboxFile.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtboxFile.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtboxFile.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtboxFile.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtboxFile.Font = new Font("Segoe UI", 9F);
+            txtboxFile.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtboxFile.Location = new Point(462, 61);
+            txtboxFile.Name = "txtboxFile";
+            txtboxFile.PasswordChar = '\0';
+            txtboxFile.PlaceholderText = "";
+            txtboxFile.SelectedText = "";
+            txtboxFile.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            txtboxFile.Size = new Size(242, 30);
+            txtboxFile.TabIndex = 3;
+            txtboxFile.TextChanged += txtboxFile_TextChanged;
+            // 
+            // btnSelect
+            // 
+            btnSelect.BorderRadius = 10;
+            btnSelect.CustomizableEdges = customizableEdges19;
+            btnSelect.DisabledState.BorderColor = Color.DarkGray;
+            btnSelect.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnSelect.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnSelect.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnSelect.FillColor = Color.LightCoral;
+            btnSelect.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btnSelect.ForeColor = Color.Black;
+            btnSelect.Location = new Point(723, 61);
+            btnSelect.Name = "btnSelect";
+            btnSelect.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            btnSelect.Size = new Size(65, 30);
+            btnSelect.TabIndex = 4;
+            btnSelect.Text = "Select";
+            // 
             // FormDashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLightLight;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnSelect);
+            Controls.Add(txtboxFile);
             Controls.Add(guna2Panel2);
             Controls.Add(guna2Panel1);
             Name = "FormDashboard";
@@ -300,5 +348,7 @@
         private Label role;
         private Label username;
         private PictureBox pictureBox2;
+        private Guna.UI2.WinForms.Guna2TextBox txtboxFile;
+        private Guna.UI2.WinForms.Guna2Button btnSelect;
     }
 }

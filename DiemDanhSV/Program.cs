@@ -11,7 +11,7 @@ namespace DiemDanhSV.PAL.Forms
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new FormDashboard());
+            Application.Run(new FormAttendanceStudent());
         }
     }
 }
