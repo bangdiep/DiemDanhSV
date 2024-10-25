@@ -1,58 +1,83 @@
+create database attendance_system;
+
 use attendance_system;
 
--- Thêm data mẫu vào bảng Users
-INSERT INTO Users (userID, fullName, userName, passwords, email, gender)
-VALUES 
-    ('52200210', 'Tang Duy Hao', 'haotang', '12345', '52200210@student.tdtu.edu.vn', 'Male'),
-    ('52200238', 'Diep Truong Khanh Bang', 'bangdiep', '12345', '52200238@student.tdtu.edu.vn', 'Female'),
-    ('52200243', 'Ho Bao Ngan', 'nganho', '12345', '52200243@student.tdtu.edu.vn', 'Female');
+-- Tạo bảng
+create table Users (
+    userID char(8),
+    fullName varchar(60),
+    userName varchar(30),
+    passwords varchar(20),
+    email varchar(28),
+    gender varchar(6),
+    constraint Pk_us primary key (userID)
+);
 
--- Thêm data mẫu vào bảng Student
-INSERT INTO Student (stdID, major)
-VALUES 
-    ('52200238', 'Mang may tinh va truyen thong du lieu'),
-    ('52200243', 'Khoa hoc may tinh');
+create table Student (
+    stdID char(8),
+    major varchar(60),
+    constraint Pk_st primary key (stdID),
+    constraint Fk_st_us foreign key (stdID) references Users(userID)
+);
 
--- Thêm data mẫu vào bảng Instructor
-INSERT INTO Instructor (inID, degree)
-VALUES 
-    ('52200210', 'Doctorate');
+create table Instructor (
+    inID char(8),
+    degree varchar(60),
+    constraint Pk_in primary key (inID),
+    constraint Fk_in_us foreign key (inID) references Users(userID)
+);
 
--- Thêm data mẫu vào bảng Subjects
-INSERT INTO Subjects (subID, subjectName)
-VALUES 
-    ('502045', 'Cong nghe phan mem'),
-    ('502046', 'Nhap mon Mang may tinh');
+create table Subjects (
+    subID char(6),
+    subjectName varchar(100),
+    constraint Pk_sj primary key (subID)
+);
 
--- Thêm data mẫu vào bảng Shifts
-INSERT INTO Shifts (shiftID, timeStart, timeEnd)
-VALUES 
-    ('S01', '06:50:00', '09:20:00'),
-    ('S02', '09:30:00', '11:50:00'),
-    ('S03', '12:45:00', '15:15:00'),
-    ('S04', '15:25:00', '17:55:00');
+create table Shifts (
+    shiftID char(3),
+    timeStart time,
+    timeEnd time,
+    constraint Pk_sh primary key (shiftID)
+);
 
--- Thêm data mẫu vào bảng Class
-INSERT INTO Class (classID, Ctype, room, term, tcID, sjID, shID)
-VALUES 
-    ('50204501', 'Ly thuyet', 'C0301', 'HK1-24-25', '52200210', '502045', 'S03'),
-    ('50204502', 'Thuc hanh', 'A0508', 'HK1-24-25', '52200210', '502045', 'S04');
+create table Class (
+    classID char(8),
+    Ctype varchar(6),
+    room varchar(5),
+    term varchar(10),
+    tcID char(8),
+    sjID char(6),
+    shID char(3),
+    constraint Pk_c primary key (classID),
+    constraint Fk_c_tc foreign key (tcID) references Instructor(inID),
+    constraint Fk_c_sj foreign key (sjID) references Subjects(subID),
+    constraint Fk_c_sh foreign key (shID) references Shifts(shiftID)    
+);
 
--- Thêm data mẫu vào bảng Lists
-INSERT INTO Lists (stdID, cID, term)
-VALUES 
-    ('52200238', '50204501', 'HK1-24-25'),
-    ('52200238', '50204502', 'HK1-24-25'),
-    ('52200243', '50204501', 'HK1-24-25');
+create table Lists (
+    stdID char(8),
+    cID char(8),
+    term varchar(10),
+    constraint Pk_us primary key (stdID, cID),
+    constraint Fk_l_c foreign key (cID) references Class(classID),
+    constraint Fk_l_st foreign key (stdID) references Student(stdID)
+);
 
--- Thêm data mẫu vào bảng Subject_Shift
-INSERT INTO Subject_Shift (subID, shID, term, dayAssign)
-VALUES 
-    ('502045', 'S03', 'HK1-24-25', 'Tuesday'),
-    ('502046', 'S02', 'HK2-23-24', 'Wednesday');
+create table Attendance (
+    stdID char(8),
+    cID char(8),
+    timeAttend time,
+    constraint Pk_at primary key (stdID, cID),
+    constraint Fk_at_c foreign key (cID) references Class(classID),
+    constraint Fk_at_st foreign key (stdID) references Student(stdID)
+);
 
--- Thêm data mẫu vào bảng Attendance
-INSERT INTO Attendance (stdID, cID, timeAttend)
-VALUES 
-    ('52200238', '50204501', '13:00:00'),
-    ('52200243', '50204501', '15:16:00');
+create table Subject_Shift (
+    subID char(6),
+    shID char(3),
+    term varchar(10),
+    dayAssign varchar(10),
+    constraint Pk_ss primary key (subID, shID),
+    constraint Fk_ss_sj foreign key (subID) references Subjects(subID),
+    constraint Fk_ss_sh foreign key (shID) references Shifts(shiftID)
+);
