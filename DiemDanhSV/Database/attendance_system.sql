@@ -10,6 +10,7 @@ create table Users (
     passwords varchar(20),
     email varchar(28),
     gender varchar(6),
+    roles int,
     constraint Pk_us primary key (userID)
 );
 

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\KhanhBang\\CNPM\\DiemDanhSV\\DiemDanhSV\\DiemDanhSV.csproj": {}
+    "D:\\University\\HK7\\CongNghe_PhanMem\\Thuc_Hanh\\Project\\Attendance\\DiemDanhSV\\DiemDanhSV.csproj": {}
   },
   "projects": {
-    "E:\\KhanhBang\\CNPM\\DiemDanhSV\\DiemDanhSV\\DiemDanhSV.csproj": {
+    "D:\\University\\HK7\\CongNghe_PhanMem\\Thuc_Hanh\\Project\\Attendance\\DiemDanhSV\\DiemDanhSV.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\KhanhBang\\CNPM\\DiemDanhSV\\DiemDanhSV\\DiemDanhSV.csproj",
+        "projectUniqueName": "D:\\University\\HK7\\CongNghe_PhanMem\\Thuc_Hanh\\Project\\Attendance\\DiemDanhSV\\DiemDanhSV.csproj",
         "projectName": "DiemDanhSV",
-        "projectPath": "E:\\KhanhBang\\CNPM\\DiemDanhSV\\DiemDanhSV\\DiemDanhSV.csproj",
-        "packagesPath": "C:\\Users\\Ad\\.nuget\\packages\\",
-        "outputPath": "E:\\KhanhBang\\CNPM\\DiemDanhSV\\DiemDanhSV\\obj\\",
+        "projectPath": "D:\\University\\HK7\\CongNghe_PhanMem\\Thuc_Hanh\\Project\\Attendance\\DiemDanhSV\\DiemDanhSV.csproj",
+        "packagesPath": "C:\\Users\\hao\\.nuget\\packages\\",
+        "outputPath": "D:\\University\\HK7\\CongNghe_PhanMem\\Thuc_Hanh\\Project\\Attendance\\DiemDanhSV\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Ad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\hao\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -48,6 +49,10 @@
             "Guna.UI2.WinForms": {
               "target": "Package",
               "version": "[2.0.4.6, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[9.1.0, )"
             }
           },
           "imports": [
@@ -69,7 +74,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

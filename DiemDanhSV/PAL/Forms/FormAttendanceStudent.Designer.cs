@@ -52,7 +52,7 @@
             guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             comboboxTerm = new Guna.UI2.WinForms.Guna2ComboBox();
             role = new Label();
-            username = new Label();
+            label_fullname = new Label();
             pictureBox2 = new PictureBox();
             txtboxCode = new Guna.UI2.WinForms.Guna2TextBox();
             btnSend = new Guna.UI2.WinForms.Guna2Button();
@@ -80,9 +80,10 @@
             guna2Panel1.CustomizableEdges = customizableEdges5;
             guna2Panel1.Dock = DockStyle.Left;
             guna2Panel1.Location = new Point(0, 0);
+            guna2Panel1.Margin = new Padding(3, 4, 3, 4);
             guna2Panel1.Name = "guna2Panel1";
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2Panel1.Size = new Size(169, 450);
+            guna2Panel1.Size = new Size(193, 600);
             guna2Panel1.TabIndex = 2;
             // 
             // btnLogout
@@ -99,10 +100,11 @@
             btnLogout.ForeColor = Color.Black;
             btnLogout.HoverState.FillColor = Color.FromArgb(255, 128, 128);
             btnLogout.HoverState.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnLogout.Location = new Point(12, 406);
+            btnLogout.Location = new Point(14, 541);
+            btnLogout.Margin = new Padding(3, 4, 3, 4);
             btnLogout.Name = "btnLogout";
             btnLogout.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnLogout.Size = new Size(134, 32);
+            btnLogout.Size = new Size(153, 43);
             btnLogout.TabIndex = 4;
             btnLogout.Text = "Log out";
             btnLogout.TextOffset = new Point(1, 0);
@@ -121,10 +123,11 @@
             btnDashboard.ForeColor = Color.Black;
             btnDashboard.HoverState.FillColor = Color.FromArgb(255, 128, 128);
             btnDashboard.HoverState.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnDashboard.Location = new Point(12, 114);
+            btnDashboard.Location = new Point(14, 152);
+            btnDashboard.Margin = new Padding(3, 4, 3, 4);
             btnDashboard.Name = "btnDashboard";
             btnDashboard.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnDashboard.Size = new Size(154, 32);
+            btnDashboard.Size = new Size(176, 43);
             btnDashboard.TabIndex = 2;
             btnDashboard.Text = "Dashboard";
             btnDashboard.TextOffset = new Point(1, 0);
@@ -132,9 +135,10 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.logo_dai_hoc_ton_duc_thang_dongphucvina_vn_;
-            pictureBox1.Location = new Point(32, -10);
+            pictureBox1.Location = new Point(37, -13);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(100, 101);
+            pictureBox1.Size = new Size(114, 135);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
@@ -144,14 +148,15 @@
             guna2Panel2.BackColor = Color.LightCoral;
             guna2Panel2.Controls.Add(comboboxTerm);
             guna2Panel2.Controls.Add(role);
-            guna2Panel2.Controls.Add(username);
+            guna2Panel2.Controls.Add(label_fullname);
             guna2Panel2.Controls.Add(pictureBox2);
             guna2Panel2.CustomizableEdges = customizableEdges9;
             guna2Panel2.Dock = DockStyle.Top;
-            guna2Panel2.Location = new Point(169, 0);
+            guna2Panel2.Location = new Point(193, 0);
+            guna2Panel2.Margin = new Padding(3, 4, 3, 4);
             guna2Panel2.Name = "guna2Panel2";
             guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2Panel2.Size = new Size(631, 50);
+            guna2Panel2.Size = new Size(721, 67);
             guna2Panel2.TabIndex = 3;
             // 
             // comboboxTerm
@@ -166,38 +171,40 @@
             comboboxTerm.Font = new Font("Segoe UI", 10F);
             comboboxTerm.ForeColor = Color.FromArgb(68, 88, 112);
             comboboxTerm.ItemHeight = 30;
-            comboboxTerm.Location = new Point(371, 9);
+            comboboxTerm.Location = new Point(424, 12);
+            comboboxTerm.Margin = new Padding(3, 4, 3, 4);
             comboboxTerm.Name = "comboboxTerm";
             comboboxTerm.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            comboboxTerm.Size = new Size(90, 36);
+            comboboxTerm.Size = new Size(102, 36);
             comboboxTerm.TabIndex = 3;
             // 
             // role
             // 
             role.AutoSize = true;
             role.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            role.Location = new Point(529, 32);
+            role.Location = new Point(605, 43);
             role.Name = "role";
-            role.Size = new Size(29, 15);
+            role.Size = new Size(37, 20);
             role.TabIndex = 2;
             role.Text = "Role";
             // 
-            // username
+            // label_fullname
             // 
-            username.AutoSize = true;
-            username.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            username.Location = new Point(529, 9);
-            username.Name = "username";
-            username.Size = new Size(40, 15);
-            username.TabIndex = 1;
-            username.Text = "Name";
+            label_fullname.AutoSize = true;
+            label_fullname.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label_fullname.Location = new Point(605, 12);
+            label_fullname.Name = "label_fullname";
+            label_fullname.Size = new Size(51, 20);
+            label_fullname.TabIndex = 1;
+            label_fullname.Text = "Name";
             // 
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources.account_avatar_face_man_people_profile_user_icon_123197;
-            pictureBox2.Location = new Point(479, 0);
+            pictureBox2.Location = new Point(547, 0);
+            pictureBox2.Margin = new Padding(3, 4, 3, 4);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(35, 47);
+            pictureBox2.Size = new Size(40, 63);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 0;
             pictureBox2.TabStop = false;
@@ -214,13 +221,14 @@
             txtboxCode.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtboxCode.Font = new Font("Segoe UI", 9F);
             txtboxCode.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtboxCode.Location = new Point(507, 74);
+            txtboxCode.Location = new Point(579, 99);
+            txtboxCode.Margin = new Padding(3, 5, 3, 5);
             txtboxCode.Name = "txtboxCode";
             txtboxCode.PasswordChar = '\0';
             txtboxCode.PlaceholderText = "";
             txtboxCode.SelectedText = "";
             txtboxCode.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            txtboxCode.Size = new Size(176, 32);
+            txtboxCode.Size = new Size(201, 43);
             txtboxCode.TabIndex = 5;
             txtboxCode.TextChanged += txtboxCode_TextChanged;
             // 
@@ -235,10 +243,11 @@
             btnSend.FillColor = Color.LightCoral;
             btnSend.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btnSend.ForeColor = Color.Black;
-            btnSend.Location = new Point(698, 74);
+            btnSend.Location = new Point(798, 99);
+            btnSend.Margin = new Padding(3, 4, 3, 4);
             btnSend.Name = "btnSend";
             btnSend.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            btnSend.Size = new Size(82, 32);
+            btnSend.Size = new Size(94, 43);
             btnSend.TabIndex = 6;
             btnSend.Text = "Send code";
             // 
@@ -266,10 +275,13 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             guna2DataGridView1.GridColor = Color.FromArgb(231, 229, 255);
-            guna2DataGridView1.Location = new Point(189, 127);
+            guna2DataGridView1.Location = new Point(216, 169);
+            guna2DataGridView1.Margin = new Padding(3, 4, 3, 4);
             guna2DataGridView1.Name = "guna2DataGridView1";
             guna2DataGridView1.RowHeadersVisible = false;
-            guna2DataGridView1.Size = new Size(599, 311);
+            guna2DataGridView1.RowHeadersWidth = 51;
+            guna2DataGridView1.RowTemplate.Height = 25;
+            guna2DataGridView1.Size = new Size(685, 415);
             guna2DataGridView1.TabIndex = 7;
             guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -296,46 +308,52 @@
             // ColumnDate
             // 
             ColumnDate.HeaderText = "Date";
+            ColumnDate.MinimumWidth = 6;
             ColumnDate.Name = "ColumnDate";
             // 
             // ColumnClass
             // 
             ColumnClass.HeaderText = "Class Room";
+            ColumnClass.MinimumWidth = 6;
             ColumnClass.Name = "ColumnClass";
             // 
             // ColumnShift
             // 
             ColumnShift.HeaderText = "Shift";
+            ColumnShift.MinimumWidth = 6;
             ColumnShift.Name = "ColumnShift";
             // 
             // ColumnTotal
             // 
             ColumnTotal.HeaderText = "Total";
+            ColumnTotal.MinimumWidth = 6;
             ColumnTotal.Name = "ColumnTotal";
             // 
             // labelSubject
             // 
             labelSubject.BackColor = Color.Transparent;
             labelSubject.Font = new Font("Sitka Subheading", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            labelSubject.Location = new Point(205, 74);
+            labelSubject.Location = new Point(234, 99);
+            labelSubject.Margin = new Padding(3, 4, 3, 4);
             labelSubject.Name = "labelSubject";
-            labelSubject.Size = new Size(69, 25);
+            labelSubject.Size = new Size(85, 31);
             labelSubject.TabIndex = 8;
             labelSubject.Text = "SUBJECT";
             labelSubject.Click += labelSubject_Click;
             // 
             // FormAttendanceStudent
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLightLight;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(914, 600);
             Controls.Add(labelSubject);
             Controls.Add(guna2DataGridView1);
             Controls.Add(btnSend);
             Controls.Add(txtboxCode);
             Controls.Add(guna2Panel2);
             Controls.Add(guna2Panel1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "FormAttendanceStudent";
             Text = "FormAttendanceStudent";
             guna2Panel1.ResumeLayout(false);
@@ -357,7 +375,7 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2ComboBox comboboxTerm;
         private Label role;
-        private Label username;
+        private Label label_fullname;
         private PictureBox pictureBox2;
         private Guna.UI2.WinForms.Guna2TextBox txtboxCode;
         private Guna.UI2.WinForms.Guna2Button btnSend;

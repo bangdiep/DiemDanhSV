@@ -40,6 +40,7 @@
             label1 = new Label();
             label2 = new Label();
             groupBox1 = new GroupBox();
+            txt_error = new Label();
             btnLogin = new Guna.UI2.WinForms.Guna2Button();
             txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
@@ -59,7 +60,7 @@
             label1.ForeColor = Color.FromArgb(255, 128, 128);
             label1.Location = new Point(210, 176);
             label1.Name = "label1";
-            label1.Size = new Size(68, 25);
+            label1.Size = new Size(85, 32);
             label1.TabIndex = 0;
             label1.Text = "log in";
             label1.Click += label1_Click;
@@ -70,12 +71,13 @@
             label2.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
             label2.Location = new Point(99, 218);
             label2.Name = "label2";
-            label2.Size = new Size(0, 19);
+            label2.Size = new Size(0, 23);
             label2.TabIndex = 1;
             // 
             // groupBox1
             // 
             groupBox1.BackColor = Color.Transparent;
+            groupBox1.Controls.Add(txt_error);
             groupBox1.Controls.Add(btnLogin);
             groupBox1.Controls.Add(txtPassword);
             groupBox1.Controls.Add(txtUsername);
@@ -90,7 +92,18 @@
             groupBox1.TabIndex = 8;
             groupBox1.TabStop = false;
             groupBox1.Text = "Log in form";
-            groupBox1.Enter += groupBox1_Enter;
+            // 
+            // txt_error
+            // 
+            txt_error.AutoSize = true;
+            txt_error.Font = new Font("Century Gothic", 8F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            txt_error.ForeColor = Color.Red;
+            txt_error.Location = new Point(99, 359);
+            txt_error.Name = "txt_error";
+            txt_error.Size = new Size(243, 17);
+            txt_error.TabIndex = 12;
+            txt_error.Text = "Username or password is incorrect!";
+            txt_error.Visible = false;
             // 
             // btnLogin
             // 
@@ -102,7 +115,7 @@
             btnLogin.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnLogin.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnLogin.FillColor = Color.LightCoral;
-            btnLogin.Font = new Font("Romantic", 15F, FontStyle.Bold);
+            btnLogin.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Bold);
             btnLogin.ForeColor = Color.White;
             btnLogin.Location = new Point(154, 400);
             btnLogin.Name = "btnLogin";
@@ -110,6 +123,7 @@
             btnLogin.Size = new Size(180, 45);
             btnLogin.TabIndex = 11;
             btnLogin.Text = "LOG IN";
+            btnLogin.Click += btnLogin_Click;
             // 
             // txtPassword
             // 
@@ -124,7 +138,8 @@
             txtPassword.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             txtPassword.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtPassword.IconLeft = Properties.Resources.eye_slash_visible_hide_hidden_show_icon_145987;
-            txtPassword.Location = new Point(99, 311);
+            txtPassword.Location = new Point(99, 302);
+            txtPassword.Margin = new Padding(3, 4, 3, 4);
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '\0';
             txtPassword.PlaceholderText = "";
@@ -133,6 +148,7 @@
             txtPassword.Size = new Size(299, 36);
             txtPassword.TabIndex = 10;
             txtPassword.TextChanged += guna2TextBox2_TextChanged;
+            txtPassword.Click += txtPassword_Click;
             // 
             // txtUsername
             // 
@@ -148,6 +164,7 @@
             txtUsername.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtUsername.IconLeft = Properties.Resources.account_avatar_face_man_people_profile_user_icon_123197;
             txtUsername.Location = new Point(99, 240);
+            txtUsername.Margin = new Padding(3, 4, 3, 4);
             txtUsername.Name = "txtUsername";
             txtUsername.PasswordChar = '\0';
             txtUsername.PlaceholderText = "";
@@ -156,6 +173,7 @@
             txtUsername.Size = new Size(299, 36);
             txtUsername.TabIndex = 9;
             txtUsername.TextChanged += guna2TextBox1_TextChanged;
+            txtUsername.Click += txtUsername_Click;
             // 
             // pictureBox1
             // 
@@ -184,18 +202,19 @@
             // 
             // FormLogin
             // 
-            AutoScaleDimensions = new SizeF(10F, 21F);
+            AutoScaleDimensions = new SizeF(12F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLightLight;
             ClientSize = new Size(1200, 720);
             Controls.Add(guna2PictureBox1);
             Controls.Add(groupBox1);
             Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(4);
             Name = "FormLogin";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FormLogin";
+            TopMost = true;
+            Load += FormLogin_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -215,5 +234,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtPassword;
         private Guna.UI2.WinForms.Guna2TextBox txtUsername;
         private Guna.UI2.WinForms.Guna2Button btnLogin;
+        private Label txt_error;
     }
 }

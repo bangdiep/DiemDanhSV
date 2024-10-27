@@ -1,11 +1,11 @@
 use attendance_system;
 
 -- Thêm data mẫu vào bảng Users
-INSERT INTO Users (userID, fullName, userName, passwords, email, gender)
+INSERT INTO Users (userID, fullName, userName, passwords, email, gender, roles)
 VALUES 
-    ('52200210', 'Tang Duy Hao', 'haotang', '12345', '52200210@student.tdtu.edu.vn', 'Male'),
-    ('52200238', 'Diep Truong Khanh Bang', 'bangdiep', '12345', '52200238@student.tdtu.edu.vn', 'Female'),
-    ('52200243', 'Ho Bao Ngan', 'nganho', '12345', '52200243@student.tdtu.edu.vn', 'Female');
+    ('52200210', 'Tang Duy Hao', 'haotang', '12345', '52200210@student.tdtu.edu.vn', 'Male', 1),
+    ('52200238', 'Diep Truong Khanh Bang', 'bangdiep', '12345', '52200238@student.tdtu.edu.vn', 'Female', 2),
+    ('52200243', 'Ho Bao Ngan', 'nganho', '12345', '52200243@student.tdtu.edu.vn', 'Female', 2);
 
 -- Thêm data mẫu vào bảng Student
 INSERT INTO Student (stdID, major)
