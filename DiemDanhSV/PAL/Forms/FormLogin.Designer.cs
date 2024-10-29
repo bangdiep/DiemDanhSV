@@ -55,12 +55,13 @@
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(255, 128, 128);
             label1.Location = new Point(210, 176);
             label1.Name = "label1";
-            label1.Size = new Size(85, 32);
+            label1.Size = new Size(68, 25);
             label1.TabIndex = 0;
             label1.Text = "log in";
             label1.Click += label1_Click;
@@ -71,11 +72,12 @@
             label2.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
             label2.Location = new Point(99, 218);
             label2.Name = "label2";
-            label2.Size = new Size(0, 23);
+            label2.Size = new Size(0, 19);
             label2.TabIndex = 1;
             // 
             // groupBox1
             // 
+            groupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             groupBox1.BackColor = Color.Transparent;
             groupBox1.Controls.Add(txt_error);
             groupBox1.Controls.Add(btnLogin);
@@ -95,18 +97,20 @@
             // 
             // txt_error
             // 
+            txt_error.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txt_error.AutoSize = true;
             txt_error.Font = new Font("Century Gothic", 8F, FontStyle.Italic, GraphicsUnit.Point, 0);
             txt_error.ForeColor = Color.Red;
             txt_error.Location = new Point(99, 359);
             txt_error.Name = "txt_error";
-            txt_error.Size = new Size(243, 17);
+            txt_error.Size = new Size(201, 15);
             txt_error.TabIndex = 12;
             txt_error.Text = "Username or password is incorrect!";
             txt_error.Visible = false;
             // 
             // btnLogin
             // 
+            btnLogin.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             btnLogin.BackColor = Color.Transparent;
             btnLogin.BorderRadius = 20;
             btnLogin.CustomizableEdges = customizableEdges1;
@@ -127,6 +131,7 @@
             // 
             // txtPassword
             // 
+            txtPassword.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txtPassword.BorderRadius = 20;
             txtPassword.CustomizableEdges = customizableEdges3;
             txtPassword.DefaultText = "Password";
@@ -152,6 +157,7 @@
             // 
             // txtUsername
             // 
+            txtUsername.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txtUsername.BorderRadius = 20;
             txtUsername.CustomizableEdges = customizableEdges5;
             txtUsername.DefaultText = "Username";
@@ -177,6 +183,7 @@
             // 
             // pictureBox1
             // 
+            pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pictureBox1.Image = Properties.Resources.logo_dai_hoc_ton_duc_thang_dongphucvina_vn_;
             pictureBox1.Location = new Point(179, 26);
             pictureBox1.Name = "pictureBox1";
@@ -187,6 +194,7 @@
             // 
             // guna2PictureBox1
             // 
+            guna2PictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             guna2PictureBox1.CustomizableEdges = customizableEdges7;
             guna2PictureBox1.Image = Properties.Resources._81d40119cc4277c33424de3297a6488c;
             guna2PictureBox1.ImageRotate = 0F;
@@ -202,7 +210,7 @@
             // 
             // FormLogin
             // 
-            AutoScaleDimensions = new SizeF(12F, 23F);
+            AutoScaleDimensions = new SizeF(10F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLightLight;
             ClientSize = new Size(1200, 720);

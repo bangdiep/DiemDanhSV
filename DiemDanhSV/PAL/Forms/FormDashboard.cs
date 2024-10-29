@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DiemDanhSV.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,11 @@ namespace DiemDanhSV.PAL.Forms
 {
     public partial class FormDashboard : Form
     {
-        public FormDashboard()
+        Users instructor;
+        public FormDashboard(Users u)
         {
             InitializeComponent();
+            instructor = u;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -33,6 +36,11 @@ namespace DiemDanhSV.PAL.Forms
         }
 
         private void txtboxFile_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormDashboard_Load(object sender, EventArgs e)
         {
 
         }

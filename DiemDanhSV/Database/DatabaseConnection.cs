@@ -10,7 +10,7 @@ namespace DiemDanhSV.Database
 {
     internal class DatabaseConnection
     {
-        private static string connectionString = "Server=localhost;Database=attendance_system;User ID=root;Password=hao2004;";
+        private static string connectionString = "Server=localhost;Database=attendance_system;User ID=root;Password=;";
         
 
         // Connect to database

@@ -80,9 +80,10 @@
             guna2Panel1.CustomizableEdges = customizableEdges13;
             guna2Panel1.Dock = DockStyle.Left;
             guna2Panel1.Location = new Point(0, 0);
+            guna2Panel1.Margin = new Padding(3, 4, 3, 4);
             guna2Panel1.Name = "guna2Panel1";
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            guna2Panel1.Size = new Size(169, 450);
+            guna2Panel1.Size = new Size(193, 600);
             guna2Panel1.TabIndex = 0;
             // 
             // btnAttendance
@@ -99,10 +100,11 @@
             btnAttendance.ForeColor = Color.Black;
             btnAttendance.HoverState.FillColor = Color.FromArgb(255, 128, 128);
             btnAttendance.HoverState.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAttendance.Location = new Point(12, 228);
+            btnAttendance.Location = new Point(14, 304);
+            btnAttendance.Margin = new Padding(3, 4, 3, 4);
             btnAttendance.Name = "btnAttendance";
             btnAttendance.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnAttendance.Size = new Size(134, 32);
+            btnAttendance.Size = new Size(153, 43);
             btnAttendance.TabIndex = 5;
             btnAttendance.Text = "Attendance";
             btnAttendance.TextOffset = new Point(15, 0);
@@ -122,10 +124,11 @@
             btnLogout.ForeColor = Color.Black;
             btnLogout.HoverState.FillColor = Color.FromArgb(255, 128, 128);
             btnLogout.HoverState.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnLogout.Location = new Point(12, 406);
+            btnLogout.Location = new Point(14, 541);
+            btnLogout.Margin = new Padding(3, 4, 3, 4);
             btnLogout.Name = "btnLogout";
             btnLogout.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnLogout.Size = new Size(134, 32);
+            btnLogout.Size = new Size(153, 43);
             btnLogout.TabIndex = 4;
             btnLogout.Text = "Log out";
             btnLogout.TextOffset = new Point(1, 0);
@@ -144,10 +147,11 @@
             btnReport.ForeColor = Color.Black;
             btnReport.HoverState.FillColor = Color.FromArgb(255, 128, 128);
             btnReport.HoverState.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnReport.Location = new Point(12, 266);
+            btnReport.Location = new Point(14, 355);
+            btnReport.Margin = new Padding(3, 4, 3, 4);
             btnReport.Name = "btnReport";
             btnReport.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnReport.Size = new Size(134, 32);
+            btnReport.Size = new Size(153, 43);
             btnReport.TabIndex = 3;
             btnReport.Text = "Report";
             btnReport.TextOffset = new Point(1, 0);
@@ -166,10 +170,11 @@
             btnAddClass.ForeColor = Color.Black;
             btnAddClass.HoverState.FillColor = Color.FromArgb(255, 128, 128);
             btnAddClass.HoverState.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAddClass.Location = new Point(12, 190);
+            btnAddClass.Location = new Point(14, 253);
+            btnAddClass.Margin = new Padding(3, 4, 3, 4);
             btnAddClass.Name = "btnAddClass";
             btnAddClass.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            btnAddClass.Size = new Size(134, 32);
+            btnAddClass.Size = new Size(153, 43);
             btnAddClass.TabIndex = 3;
             btnAddClass.Text = "Add class";
             btnAddClass.TextOffset = new Point(8, 0);
@@ -189,10 +194,11 @@
             btnAddStudent.ForeColor = Color.Black;
             btnAddStudent.HoverState.FillColor = Color.FromArgb(255, 128, 128);
             btnAddStudent.HoverState.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAddStudent.Location = new Point(12, 152);
+            btnAddStudent.Location = new Point(14, 203);
+            btnAddStudent.Margin = new Padding(3, 4, 3, 4);
             btnAddStudent.Name = "btnAddStudent";
             btnAddStudent.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            btnAddStudent.Size = new Size(134, 32);
+            btnAddStudent.Size = new Size(153, 43);
             btnAddStudent.TabIndex = 3;
             btnAddStudent.Text = "Add Student";
             btnAddStudent.TextOffset = new Point(15, 0);
@@ -211,10 +217,11 @@
             btnDashboard.ForeColor = Color.Black;
             btnDashboard.HoverState.FillColor = Color.FromArgb(255, 128, 128);
             btnDashboard.HoverState.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnDashboard.Location = new Point(12, 114);
+            btnDashboard.Location = new Point(14, 152);
+            btnDashboard.Margin = new Padding(3, 4, 3, 4);
             btnDashboard.Name = "btnDashboard";
             btnDashboard.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            btnDashboard.Size = new Size(154, 32);
+            btnDashboard.Size = new Size(176, 43);
             btnDashboard.TabIndex = 2;
             btnDashboard.Text = "Dashboard";
             btnDashboard.TextOffset = new Point(1, 0);
@@ -222,9 +229,10 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.logo_dai_hoc_ton_duc_thang_dongphucvina_vn_;
-            pictureBox1.Location = new Point(32, -10);
+            pictureBox1.Location = new Point(37, -13);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(100, 101);
+            pictureBox1.Size = new Size(114, 135);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
@@ -238,19 +246,20 @@
             guna2Panel2.Controls.Add(pictureBox2);
             guna2Panel2.CustomizableEdges = customizableEdges15;
             guna2Panel2.Dock = DockStyle.Top;
-            guna2Panel2.Location = new Point(169, 0);
+            guna2Panel2.Location = new Point(193, 0);
+            guna2Panel2.Margin = new Padding(3, 4, 3, 4);
             guna2Panel2.Name = "guna2Panel2";
             guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            guna2Panel2.Size = new Size(631, 50);
+            guna2Panel2.Size = new Size(721, 67);
             guna2Panel2.TabIndex = 1;
             // 
             // role
             // 
             role.AutoSize = true;
             role.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            role.Location = new Point(529, 32);
+            role.Location = new Point(605, 43);
             role.Name = "role";
-            role.Size = new Size(29, 15);
+            role.Size = new Size(37, 20);
             role.TabIndex = 2;
             role.Text = "Role";
             // 
@@ -258,18 +267,19 @@
             // 
             username.AutoSize = true;
             username.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            username.Location = new Point(529, 9);
+            username.Location = new Point(605, 12);
             username.Name = "username";
-            username.Size = new Size(40, 15);
+            username.Size = new Size(51, 20);
             username.TabIndex = 1;
             username.Text = "Name";
             // 
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources.account_avatar_face_man_people_profile_user_icon_123197;
-            pictureBox2.Location = new Point(479, 0);
+            pictureBox2.Location = new Point(547, 0);
+            pictureBox2.Margin = new Padding(3, 4, 3, 4);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(35, 47);
+            pictureBox2.Size = new Size(40, 63);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 0;
             pictureBox2.TabStop = false;
@@ -286,13 +296,14 @@
             txtboxFile.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtboxFile.Font = new Font("Segoe UI", 9F);
             txtboxFile.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtboxFile.Location = new Point(462, 61);
+            txtboxFile.Location = new Point(528, 81);
+            txtboxFile.Margin = new Padding(3, 5, 3, 5);
             txtboxFile.Name = "txtboxFile";
             txtboxFile.PasswordChar = '\0';
             txtboxFile.PlaceholderText = "";
             txtboxFile.SelectedText = "";
             txtboxFile.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            txtboxFile.Size = new Size(242, 30);
+            txtboxFile.Size = new Size(277, 40);
             txtboxFile.TabIndex = 3;
             txtboxFile.TextChanged += txtboxFile_TextChanged;
             // 
@@ -307,25 +318,28 @@
             btnSelect.FillColor = Color.LightCoral;
             btnSelect.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btnSelect.ForeColor = Color.Black;
-            btnSelect.Location = new Point(723, 61);
+            btnSelect.Location = new Point(826, 81);
+            btnSelect.Margin = new Padding(3, 4, 3, 4);
             btnSelect.Name = "btnSelect";
             btnSelect.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            btnSelect.Size = new Size(65, 30);
+            btnSelect.Size = new Size(74, 40);
             btnSelect.TabIndex = 4;
             btnSelect.Text = "Select";
             // 
             // FormDashboard
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLightLight;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(914, 600);
             Controls.Add(btnSelect);
             Controls.Add(txtboxFile);
             Controls.Add(guna2Panel2);
             Controls.Add(guna2Panel1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "FormDashboard";
             Text = "FormDashboard";
+            Load += FormDashboard_Load;
             guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             guna2Panel2.ResumeLayout(false);

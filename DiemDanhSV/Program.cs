@@ -13,7 +13,9 @@ namespace DiemDanhSV.PAL.Forms
             ApplicationConfiguration.Initialize();
             //Application.Run(new FormAttendanceStudent());
             Application.Run(new FormLogin());
-            
+
+            //Application.Run(new Test());
+
         }
     }
 }

@@ -67,7 +67,7 @@ create table Lists (
 create table Attendance (
     stdID char(8),
     cID char(8),
-    timeAttend time,
+    timeAttend datetime,
     constraint Pk_at primary key (stdID, cID),
     constraint Fk_at_c foreign key (cID) references Class(classID),
     constraint Fk_at_st foreign key (stdID) references Student(stdID)

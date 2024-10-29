@@ -3,28 +3,44 @@
   "WorkspaceRootPath": "E:\\KhanhBang\\CNPM\\DiemDanhSV\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{00C125F1-D0B0-4CFC-A649-5F930EDA5695}|DiemDanhSV\\DiemDanhSV.csproj|e:\\khanhbang\\cnpm\\diemdanhsv\\diemdanhsv\\pal\\forms\\formattendancestudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{00C125F1-D0B0-4CFC-A649-5F930EDA5695}|DiemDanhSV\\DiemDanhSV.csproj|solutionrelative:diemdanhsv\\pal\\forms\\formattendancestudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{00C125F1-D0B0-4CFC-A649-5F930EDA5695}|DiemDanhSV\\DiemDanhSV.csproj|e:\\khanhbang\\cnpm\\diemdanhsv\\diemdanhsv\\repository\\subjectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00C125F1-D0B0-4CFC-A649-5F930EDA5695}|DiemDanhSV\\DiemDanhSV.csproj|solutionrelative:diemdanhsv\\repository\\subjectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{00C125F1-D0B0-4CFC-A649-5F930EDA5695}|DiemDanhSV\\DiemDanhSV.csproj|e:\\khanhbang\\cnpm\\diemdanhsv\\diemdanhsv\\pal\\forms\\formdashboardstudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{00C125F1-D0B0-4CFC-A649-5F930EDA5695}|DiemDanhSV\\DiemDanhSV.csproj|solutionrelative:diemdanhsv\\pal\\forms\\formdashboardstudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{00C125F1-D0B0-4CFC-A649-5F930EDA5695}|DiemDanhSV\\DiemDanhSV.csproj|e:\\khanhbang\\cnpm\\diemdanhsv\\diemdanhsv\\pal\\forms\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00C125F1-D0B0-4CFC-A649-5F930EDA5695}|DiemDanhSV\\DiemDanhSV.csproj|solutionrelative:diemdanhsv\\pal\\forms\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{00C125F1-D0B0-4CFC-A649-5F930EDA5695}|DiemDanhSV\\DiemDanhSV.csproj|e:\\khanhbang\\cnpm\\diemdanhsv\\diemdanhsv\\pal\\forms\\formdashboardstudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00C125F1-D0B0-4CFC-A649-5F930EDA5695}|DiemDanhSV\\DiemDanhSV.csproj|solutionrelative:diemdanhsv\\pal\\forms\\formdashboardstudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{00C125F1-D0B0-4CFC-A649-5F930EDA5695}|DiemDanhSV\\DiemDanhSV.csproj|E:\\KhanhBang\\CNPM\\DiemDanhSV\\diemdanhsv\\pal\\forms\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{00C125F1-D0B0-4CFC-A649-5F930EDA5695}|DiemDanhSV\\DiemDanhSV.csproj|solutionrelative:diemdanhsv\\pal\\forms\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{00C125F1-D0B0-4CFC-A649-5F930EDA5695}|DiemDanhSV\\DiemDanhSV.csproj|e:\\khanhbang\\cnpm\\diemdanhsv\\diemdanhsv\\pal\\forms\\formdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{00C125F1-D0B0-4CFC-A649-5F930EDA5695}|DiemDanhSV\\DiemDanhSV.csproj|solutionrelative:diemdanhsv\\pal\\forms\\formdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{00C125F1-D0B0-4CFC-A649-5F930EDA5695}|DiemDanhSV\\DiemDanhSV.csproj|E:\\KhanhBang\\CNPM\\DiemDanhSV\\diemdanhsv\\pal\\forms\\test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{00C125F1-D0B0-4CFC-A649-5F930EDA5695}|DiemDanhSV\\DiemDanhSV.csproj|solutionrelative:diemdanhsv\\pal\\forms\\test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{00C125F1-D0B0-4CFC-A649-5F930EDA5695}|DiemDanhSV\\DiemDanhSV.csproj|e:\\khanhbang\\cnpm\\diemdanhsv\\diemdanhsv\\pal\\forms\\formdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00C125F1-D0B0-4CFC-A649-5F930EDA5695}|DiemDanhSV\\DiemDanhSV.csproj|solutionrelative:diemdanhsv\\pal\\forms\\formdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{00C125F1-D0B0-4CFC-A649-5F930EDA5695}|DiemDanhSV\\DiemDanhSV.csproj|e:\\khanhbang\\cnpm\\diemdanhsv\\diemdanhsv\\pal\\forms\\formaddsubject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00C125F1-D0B0-4CFC-A649-5F930EDA5695}|DiemDanhSV\\DiemDanhSV.csproj|solutionrelative:diemdanhsv\\pal\\forms\\formaddsubject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{00C125F1-D0B0-4CFC-A649-5F930EDA5695}|DiemDanhSV\\DiemDanhSV.csproj|e:\\khanhbang\\cnpm\\diemdanhsv\\diemdanhsv\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00C125F1-D0B0-4CFC-A649-5F930EDA5695}|DiemDanhSV\\DiemDanhSV.csproj|solutionrelative:diemdanhsv\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{00C125F1-D0B0-4CFC-A649-5F930EDA5695}|DiemDanhSV\\DiemDanhSV.csproj|E:\\KhanhBang\\CNPM\\DiemDanhSV\\diemdanhsv\\pal\\forms\\formaddsubject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{00C125F1-D0B0-4CFC-A649-5F930EDA5695}|DiemDanhSV\\DiemDanhSV.csproj|solutionrelative:diemdanhsv\\pal\\forms\\formaddsubject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00C125F1-D0B0-4CFC-A649-5F930EDA5695}|DiemDanhSV\\DiemDanhSV.csproj|e:\\khanhbang\\cnpm\\diemdanhsv\\diemdanhsv\\controller\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00C125F1-D0B0-4CFC-A649-5F930EDA5695}|DiemDanhSV\\DiemDanhSV.csproj|solutionrelative:diemdanhsv\\controller\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00C125F1-D0B0-4CFC-A649-5F930EDA5695}|DiemDanhSV\\DiemDanhSV.csproj|e:\\khanhbang\\cnpm\\diemdanhsv\\diemdanhsv\\models\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00C125F1-D0B0-4CFC-A649-5F930EDA5695}|DiemDanhSV\\DiemDanhSV.csproj|solutionrelative:diemdanhsv\\models\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00C125F1-D0B0-4CFC-A649-5F930EDA5695}|DiemDanhSV\\DiemDanhSV.csproj|e:\\khanhbang\\cnpm\\diemdanhsv\\diemdanhsv\\repository\\studentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00C125F1-D0B0-4CFC-A649-5F930EDA5695}|DiemDanhSV\\DiemDanhSV.csproj|solutionrelative:diemdanhsv\\repository\\studentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00C125F1-D0B0-4CFC-A649-5F930EDA5695}|DiemDanhSV\\DiemDanhSV.csproj|e:\\khanhbang\\cnpm\\diemdanhsv\\diemdanhsv\\controller\\classescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00C125F1-D0B0-4CFC-A649-5F930EDA5695}|DiemDanhSV\\DiemDanhSV.csproj|solutionrelative:diemdanhsv\\controller\\classescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,82 +50,127 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FormAttendanceStudent.cs [Design]",
-              "DocumentMoniker": "E:\\KhanhBang\\CNPM\\DiemDanhSV\\DiemDanhSV\\PAL\\Forms\\FormAttendanceStudent.cs",
-              "RelativeDocumentMoniker": "DiemDanhSV\\PAL\\Forms\\FormAttendanceStudent.cs",
-              "ToolTip": "E:\\KhanhBang\\CNPM\\DiemDanhSV\\DiemDanhSV\\PAL\\Forms\\FormAttendanceStudent.cs [Design]",
-              "RelativeToolTip": "DiemDanhSV\\PAL\\Forms\\FormAttendanceStudent.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T18:52:51.426Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "FormDashboardStudent.cs [Design]",
-              "DocumentMoniker": "E:\\KhanhBang\\CNPM\\DiemDanhSV\\DiemDanhSV\\PAL\\Forms\\FormDashboardStudent.cs",
-              "RelativeDocumentMoniker": "DiemDanhSV\\PAL\\Forms\\FormDashboardStudent.cs",
-              "ToolTip": "E:\\KhanhBang\\CNPM\\DiemDanhSV\\DiemDanhSV\\PAL\\Forms\\FormDashboardStudent.cs [Design]",
-              "RelativeToolTip": "DiemDanhSV\\PAL\\Forms\\FormDashboardStudent.cs [Design]",
+              "Title": "FormLogin.cs",
+              "DocumentMoniker": "E:\\KhanhBang\\CNPM\\DiemDanhSV\\DiemDanhSV\\PAL\\Forms\\FormLogin.cs",
+              "RelativeDocumentMoniker": "DiemDanhSV\\PAL\\Forms\\FormLogin.cs",
+              "ToolTip": "E:\\KhanhBang\\CNPM\\DiemDanhSV\\DiemDanhSV\\PAL\\Forms\\FormLogin.cs",
+              "RelativeToolTip": "DiemDanhSV\\PAL\\Forms\\FormLogin.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAcwFAAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T18:52:32.911Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-10-29T20:46:18.415Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "FormDashboardStudent.cs",
-              "DocumentMoniker": "E:\\KhanhBang\\CNPM\\DiemDanhSV\\DiemDanhSV\\PAL\\Forms\\FormDashboardStudent.cs",
-              "RelativeDocumentMoniker": "DiemDanhSV\\PAL\\Forms\\FormDashboardStudent.cs",
-              "ToolTip": "E:\\KhanhBang\\CNPM\\DiemDanhSV\\DiemDanhSV\\PAL\\Forms\\FormDashboardStudent.cs",
-              "RelativeToolTip": "DiemDanhSV\\PAL\\Forms\\FormDashboardStudent.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAVAAAAAAAAAA==",
+              "Title": "FormLogin.cs [Design]",
+              "DocumentMoniker": "E:\\KhanhBang\\CNPM\\DiemDanhSV\\DiemDanhSV\\PAL\\Forms\\FormLogin.cs",
+              "RelativeDocumentMoniker": "DiemDanhSV\\PAL\\Forms\\FormLogin.cs",
+              "ToolTip": "E:\\KhanhBang\\CNPM\\DiemDanhSV\\DiemDanhSV\\PAL\\Forms\\FormLogin.cs [Design]",
+              "RelativeToolTip": "DiemDanhSV\\PAL\\Forms\\FormLogin.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T17:08:18.827Z",
+              "WhenOpened": "2024-10-29T20:46:12.495Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Test.cs [Design]",
+              "DocumentMoniker": "E:\\KhanhBang\\CNPM\\DiemDanhSV\\DiemDanhSV\\PAL\\Forms\\Test.cs",
+              "RelativeDocumentMoniker": "DiemDanhSV\\PAL\\Forms\\Test.cs",
+              "ToolTip": "E:\\KhanhBang\\CNPM\\DiemDanhSV\\DiemDanhSV\\PAL\\Forms\\Test.cs [Design]",
+              "RelativeToolTip": "DiemDanhSV\\PAL\\Forms\\Test.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T20:45:45.226Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Subject.cs",
+              "DocumentMoniker": "E:\\KhanhBang\\CNPM\\DiemDanhSV\\DiemDanhSV\\Models\\Subject.cs",
+              "RelativeDocumentMoniker": "DiemDanhSV\\Models\\Subject.cs",
+              "ToolTip": "E:\\KhanhBang\\CNPM\\DiemDanhSV\\DiemDanhSV\\Models\\Subject.cs",
+              "RelativeToolTip": "DiemDanhSV\\Models\\Subject.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T20:39:14.706Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SubjectRepository.cs",
+              "DocumentMoniker": "E:\\KhanhBang\\CNPM\\DiemDanhSV\\DiemDanhSV\\Repository\\SubjectRepository.cs",
+              "RelativeDocumentMoniker": "DiemDanhSV\\Repository\\SubjectRepository.cs",
+              "ToolTip": "E:\\KhanhBang\\CNPM\\DiemDanhSV\\DiemDanhSV\\Repository\\SubjectRepository.cs",
+              "RelativeToolTip": "DiemDanhSV\\Repository\\SubjectRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T20:29:05.509Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "StudentRepository.cs",
+              "DocumentMoniker": "E:\\KhanhBang\\CNPM\\DiemDanhSV\\DiemDanhSV\\Repository\\StudentRepository.cs",
+              "RelativeDocumentMoniker": "DiemDanhSV\\Repository\\StudentRepository.cs",
+              "ToolTip": "E:\\KhanhBang\\CNPM\\DiemDanhSV\\DiemDanhSV\\Repository\\StudentRepository.cs",
+              "RelativeToolTip": "DiemDanhSV\\Repository\\StudentRepository.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAQwEMAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T20:27:23.554Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "StudentController.cs",
+              "DocumentMoniker": "E:\\KhanhBang\\CNPM\\DiemDanhSV\\DiemDanhSV\\Controller\\StudentController.cs",
+              "RelativeDocumentMoniker": "DiemDanhSV\\Controller\\StudentController.cs",
+              "ToolTip": "E:\\KhanhBang\\CNPM\\DiemDanhSV\\DiemDanhSV\\Controller\\StudentController.cs",
+              "RelativeToolTip": "DiemDanhSV\\Controller\\StudentController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T20:25:39.783Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ClassesController.cs",
+              "DocumentMoniker": "E:\\KhanhBang\\CNPM\\DiemDanhSV\\DiemDanhSV\\Controller\\ClassesController.cs",
+              "RelativeDocumentMoniker": "DiemDanhSV\\Controller\\ClassesController.cs",
+              "ToolTip": "E:\\KhanhBang\\CNPM\\DiemDanhSV\\DiemDanhSV\\Controller\\ClassesController.cs",
+              "RelativeToolTip": "DiemDanhSV\\Controller\\ClassesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T20:24:48.82Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FormAddSubject.cs",
+              "DocumentMoniker": "E:\\KhanhBang\\CNPM\\DiemDanhSV\\DiemDanhSV\\PAL\\Forms\\FormAddSubject.cs",
+              "RelativeDocumentMoniker": "DiemDanhSV\\PAL\\Forms\\FormAddSubject.cs",
+              "ToolTip": "E:\\KhanhBang\\CNPM\\DiemDanhSV\\DiemDanhSV\\PAL\\Forms\\FormAddSubject.cs",
+              "RelativeToolTip": "DiemDanhSV\\PAL\\Forms\\FormAddSubject.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T20:18:52.75Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\KhanhBang\\CNPM\\DiemDanhSV\\DiemDanhSV\\Program.cs",
-              "RelativeDocumentMoniker": "DiemDanhSV\\Program.cs",
-              "ToolTip": "E:\\KhanhBang\\CNPM\\DiemDanhSV\\DiemDanhSV\\Program.cs",
-              "RelativeToolTip": "DiemDanhSV\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
+              "Title": "FormAddSubject.cs [Design]",
+              "DocumentMoniker": "E:\\KhanhBang\\CNPM\\DiemDanhSV\\DiemDanhSV\\PAL\\Forms\\FormAddSubject.cs",
+              "RelativeDocumentMoniker": "DiemDanhSV\\PAL\\Forms\\FormAddSubject.cs",
+              "ToolTip": "E:\\KhanhBang\\CNPM\\DiemDanhSV\\DiemDanhSV\\PAL\\Forms\\FormAddSubject.cs [Design]",
+              "RelativeToolTip": "DiemDanhSV\\PAL\\Forms\\FormAddSubject.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T13:53:18.416Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FormDashboard.cs [Design]",
-              "DocumentMoniker": "E:\\KhanhBang\\CNPM\\DiemDanhSV\\DiemDanhSV\\PAL\\Forms\\FormDashboard.cs",
-              "RelativeDocumentMoniker": "DiemDanhSV\\PAL\\Forms\\FormDashboard.cs",
-              "ToolTip": "E:\\KhanhBang\\CNPM\\DiemDanhSV\\DiemDanhSV\\PAL\\Forms\\FormDashboard.cs [Design]",
-              "RelativeToolTip": "DiemDanhSV\\PAL\\Forms\\FormDashboard.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T13:22:29.162Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FormDashboard.cs",
-              "DocumentMoniker": "E:\\KhanhBang\\CNPM\\DiemDanhSV\\DiemDanhSV\\PAL\\Forms\\FormDashboard.cs",
-              "RelativeDocumentMoniker": "DiemDanhSV\\PAL\\Forms\\FormDashboard.cs",
-              "ToolTip": "E:\\KhanhBang\\CNPM\\DiemDanhSV\\DiemDanhSV\\PAL\\Forms\\FormDashboard.cs",
-              "RelativeToolTip": "DiemDanhSV\\PAL\\Forms\\FormDashboard.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAASwCQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T13:31:01.209Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-29T20:16:57.831Z"
             }
           ]
         }

@@ -50,29 +50,30 @@
             role = new Label();
             username = new Label();
             pictureBox2 = new PictureBox();
-            guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
+            Subject_list_gridView = new Guna.UI2.WinForms.Guna2DataGridView();
             ColumnSubject = new DataGridViewTextBoxColumn();
+            ColumnClassID = new DataGridViewTextBoxColumn();
             ColumnShift = new DataGridViewTextBoxColumn();
             ColumnTotal = new DataGridViewTextBoxColumn();
             guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Subject_list_gridView).BeginInit();
             SuspendLayout();
             // 
             // guna2Panel1
             // 
+            guna2Panel1.BackColor = SystemColors.Control;
             guna2Panel1.Controls.Add(btnLogout);
             guna2Panel1.Controls.Add(btnDashboard);
             guna2Panel1.Controls.Add(pictureBox1);
             guna2Panel1.CustomizableEdges = customizableEdges5;
             guna2Panel1.Dock = DockStyle.Left;
             guna2Panel1.Location = new Point(0, 0);
-            guna2Panel1.Margin = new Padding(3, 4, 3, 4);
             guna2Panel1.Name = "guna2Panel1";
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2Panel1.Size = new Size(193, 600);
+            guna2Panel1.Size = new Size(169, 450);
             guna2Panel1.TabIndex = 1;
             // 
             // btnLogout
@@ -89,14 +90,14 @@
             btnLogout.ForeColor = Color.Black;
             btnLogout.HoverState.FillColor = Color.FromArgb(255, 128, 128);
             btnLogout.HoverState.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnLogout.Location = new Point(14, 541);
-            btnLogout.Margin = new Padding(3, 4, 3, 4);
+            btnLogout.Location = new Point(12, 406);
             btnLogout.Name = "btnLogout";
             btnLogout.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnLogout.Size = new Size(153, 43);
+            btnLogout.Size = new Size(134, 32);
             btnLogout.TabIndex = 4;
             btnLogout.Text = "Log out";
             btnLogout.TextOffset = new Point(1, 0);
+            btnLogout.Click += btnLogout_Click;
             // 
             // btnDashboard
             // 
@@ -112,11 +113,10 @@
             btnDashboard.ForeColor = Color.Black;
             btnDashboard.HoverState.FillColor = Color.FromArgb(255, 128, 128);
             btnDashboard.HoverState.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnDashboard.Location = new Point(14, 152);
-            btnDashboard.Margin = new Padding(3, 4, 3, 4);
+            btnDashboard.Location = new Point(12, 114);
             btnDashboard.Name = "btnDashboard";
             btnDashboard.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnDashboard.Size = new Size(176, 43);
+            btnDashboard.Size = new Size(154, 32);
             btnDashboard.TabIndex = 2;
             btnDashboard.Text = "Dashboard";
             btnDashboard.TextOffset = new Point(1, 0);
@@ -124,10 +124,9 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.logo_dai_hoc_ton_duc_thang_dongphucvina_vn_;
-            pictureBox1.Location = new Point(37, -13);
-            pictureBox1.Margin = new Padding(3, 4, 3, 4);
+            pictureBox1.Location = new Point(32, 0);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(114, 135);
+            pictureBox1.Size = new Size(100, 98);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
@@ -141,11 +140,10 @@
             guna2Panel2.Controls.Add(pictureBox2);
             guna2Panel2.CustomizableEdges = customizableEdges9;
             guna2Panel2.Dock = DockStyle.Top;
-            guna2Panel2.Location = new Point(193, 0);
-            guna2Panel2.Margin = new Padding(3, 4, 3, 4);
+            guna2Panel2.Location = new Point(169, 0);
             guna2Panel2.Name = "guna2Panel2";
             guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2Panel2.Size = new Size(721, 67);
+            guna2Panel2.Size = new Size(659, 50);
             guna2Panel2.TabIndex = 2;
             guna2Panel2.Paint += guna2Panel2_Paint;
             // 
@@ -161,20 +159,19 @@
             comboboxTerm.Font = new Font("Segoe UI", 10F);
             comboboxTerm.ForeColor = Color.FromArgb(68, 88, 112);
             comboboxTerm.ItemHeight = 30;
-            comboboxTerm.Location = new Point(424, 12);
-            comboboxTerm.Margin = new Padding(3, 4, 3, 4);
+            comboboxTerm.Location = new Point(371, 9);
             comboboxTerm.Name = "comboboxTerm";
             comboboxTerm.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            comboboxTerm.Size = new Size(102, 36);
+            comboboxTerm.Size = new Size(90, 36);
             comboboxTerm.TabIndex = 3;
             // 
             // role
             // 
             role.AutoSize = true;
             role.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            role.Location = new Point(605, 43);
+            role.Location = new Point(529, 27);
             role.Name = "role";
-            role.Size = new Size(37, 20);
+            role.Size = new Size(29, 15);
             role.TabIndex = 2;
             role.Text = "Role";
             // 
@@ -182,27 +179,26 @@
             // 
             username.AutoSize = true;
             username.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            username.Location = new Point(605, 12);
+            username.Location = new Point(529, 9);
             username.Name = "username";
-            username.Size = new Size(51, 20);
+            username.Size = new Size(40, 15);
             username.TabIndex = 1;
             username.Text = "Name";
             // 
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources.account_avatar_face_man_people_profile_user_icon_123197;
-            pictureBox2.Location = new Point(547, 0);
-            pictureBox2.Margin = new Padding(3, 4, 3, 4);
+            pictureBox2.Location = new Point(479, 0);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(40, 63);
+            pictureBox2.Size = new Size(35, 47);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 0;
             pictureBox2.TabStop = false;
             // 
-            // guna2DataGridView1
+            // Subject_list_gridView
             // 
             dataGridViewCellStyle1.BackColor = Color.White;
-            guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            Subject_list_gridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
@@ -210,10 +206,10 @@
             dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            guna2DataGridView1.ColumnHeadersHeight = 17;
-            guna2DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            guna2DataGridView1.Columns.AddRange(new DataGridViewColumn[] { ColumnSubject, ColumnShift, ColumnTotal });
+            Subject_list_gridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            Subject_list_gridView.ColumnHeadersHeight = 17;
+            Subject_list_gridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            Subject_list_gridView.Columns.AddRange(new DataGridViewColumn[] { ColumnSubject, ColumnClassID, ColumnShift, ColumnTotal });
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
@@ -221,43 +217,47 @@
             dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
-            guna2DataGridView1.GridColor = Color.FromArgb(231, 229, 255);
-            guna2DataGridView1.Location = new Point(216, 93);
-            guna2DataGridView1.Margin = new Padding(3, 4, 3, 4);
-            guna2DataGridView1.Name = "guna2DataGridView1";
-            guna2DataGridView1.RowHeadersVisible = false;
-            guna2DataGridView1.RowHeadersWidth = 51;
-            guna2DataGridView1.RowTemplate.Height = 25;
-            guna2DataGridView1.Size = new Size(685, 491);
-            guna2DataGridView1.TabIndex = 3;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
-            guna2DataGridView1.ThemeStyle.BackColor = Color.White;
-            guna2DataGridView1.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
-            guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
-            guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
-            guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
-            guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = Color.White;
-            guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 17;
-            guna2DataGridView1.ThemeStyle.ReadOnly = false;
-            guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = Color.White;
-            guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            guna2DataGridView1.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
-            guna2DataGridView1.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
-            guna2DataGridView1.ThemeStyle.RowsStyle.Height = 25;
-            guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            Subject_list_gridView.DefaultCellStyle = dataGridViewCellStyle3;
+            Subject_list_gridView.GridColor = Color.FromArgb(231, 229, 255);
+            Subject_list_gridView.Location = new Point(175, 56);
+            Subject_list_gridView.Name = "Subject_list_gridView";
+            Subject_list_gridView.RowHeadersVisible = false;
+            Subject_list_gridView.RowHeadersWidth = 51;
+            Subject_list_gridView.Size = new Size(643, 382);
+            Subject_list_gridView.TabIndex = 3;
+            Subject_list_gridView.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
+            Subject_list_gridView.ThemeStyle.AlternatingRowsStyle.Font = null;
+            Subject_list_gridView.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
+            Subject_list_gridView.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
+            Subject_list_gridView.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
+            Subject_list_gridView.ThemeStyle.BackColor = Color.White;
+            Subject_list_gridView.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
+            Subject_list_gridView.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
+            Subject_list_gridView.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            Subject_list_gridView.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
+            Subject_list_gridView.ThemeStyle.HeaderStyle.ForeColor = Color.White;
+            Subject_list_gridView.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            Subject_list_gridView.ThemeStyle.HeaderStyle.Height = 17;
+            Subject_list_gridView.ThemeStyle.ReadOnly = false;
+            Subject_list_gridView.ThemeStyle.RowsStyle.BackColor = Color.White;
+            Subject_list_gridView.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            Subject_list_gridView.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
+            Subject_list_gridView.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
+            Subject_list_gridView.ThemeStyle.RowsStyle.Height = 25;
+            Subject_list_gridView.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            Subject_list_gridView.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             // 
             // ColumnSubject
             // 
-            ColumnSubject.HeaderText = "Subject";
+            ColumnSubject.HeaderText = "Class";
             ColumnSubject.MinimumWidth = 6;
             ColumnSubject.Name = "ColumnSubject";
+            // 
+            // ColumnClassID
+            // 
+            ColumnClassID.HeaderText = "Class Code";
+            ColumnClassID.MinimumWidth = 6;
+            ColumnClassID.Name = "ColumnClassID";
             // 
             // ColumnShift
             // 
@@ -273,21 +273,22 @@
             // 
             // FormDashboardStudent
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(914, 600);
-            Controls.Add(guna2DataGridView1);
+            BackColor = SystemColors.ActiveCaption;
+            ClientSize = new Size(828, 450);
+            Controls.Add(Subject_list_gridView);
             Controls.Add(guna2Panel2);
             Controls.Add(guna2Panel1);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "FormDashboardStudent";
             Text = "FormDashboardStudent";
+            Load += FormDashboardStudent_Load;
             guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             guna2Panel2.ResumeLayout(false);
             guna2Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Subject_list_gridView).EndInit();
             ResumeLayout(false);
         }
 
@@ -302,8 +303,9 @@
         private Label username;
         private PictureBox pictureBox2;
         private Guna.UI2.WinForms.Guna2ComboBox comboboxTerm;
-        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
+        private Guna.UI2.WinForms.Guna2DataGridView Subject_list_gridView;
         private DataGridViewTextBoxColumn ColumnSubject;
+        private DataGridViewTextBoxColumn ColumnClassID;
         private DataGridViewTextBoxColumn ColumnShift;
         private DataGridViewTextBoxColumn ColumnTotal;
     }

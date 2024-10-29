@@ -73,9 +73,11 @@ namespace DiemDanhSV.PAL.Forms
                 string usName = txtUsername.Text;
                 string usPassword = txtPassword.Text;
 
+                this.Cursor = Cursors.AppStarting;
+
                 Users user = usersController.getUsersByUsername(usName);
 
-                if (user.GetPassword() != usPassword)
+                if (user.Password != usPassword)
                 {
                     txt_error.Text = "Username or password is incorrect!";
                     txt_error.Visible = true;
@@ -84,25 +86,41 @@ namespace DiemDanhSV.PAL.Forms
                 else
                 {
 
-                    if (user.GetRole() == 1)
+                    if (user.Role == 1)
                     {
-                        MessageBox.Show("Instructor");
+                        //MessageBox.Show("Instructor");
+                        //FormDashboard dash = new FormDashboard();
+
+                        Instructor inst = user.ToInstructor();
+                        FormDashboardInstructor instructor = new FormDashboardInstructor(inst);
+                        instructor.Show();
+
+                        this.Hide();
                     }
-                    else if (user.GetRole() == 2)
+                    else if (user.Role == 2)
                     {
-                        FormDashboardStudent student = new FormDashboardStudent();
+                        Student std = user.ToStudent();
+                        FormDashboardStudent student = new FormDashboardStudent(std);
                         student.Show();
+
+                        Task.Run(() =>
+                        {
+                            student.LoadData();
+                        });
+
                         this.Hide();
 
                     }
+
                 }
             }
             catch (Exception ex)
             {
                 string msg = ex.Message;
-                MessageBox.Show(msg);
+                //MessageBox.Show(msg);
                 txt_error.Text = msg;
                 txt_error.Visible = true;
+                this.Cursor = Cursors.Default;
             }
 
         }
