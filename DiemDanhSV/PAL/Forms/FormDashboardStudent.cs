@@ -34,7 +34,7 @@ namespace DiemDanhSV.PAL.Forms
         {
             username.Text = student.FullName;
             role.Text = student.UserID;
-            
+
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -80,6 +80,5 @@ namespace DiemDanhSV.PAL.Forms
             });
 
         }
-
     }
 }
