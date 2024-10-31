@@ -148,7 +148,7 @@
             guna2Panel2.Margin = new Padding(3, 4, 3, 4);
             guna2Panel2.Name = "guna2Panel2";
             guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2Panel2.Size = new Size(721, 67);
+            guna2Panel2.Size = new Size(728, 67);
             guna2Panel2.TabIndex = 3;
             // 
             // panel1
@@ -158,7 +158,7 @@
             panel1.Controls.Add(comboboxTerm);
             panel1.Controls.Add(role);
             panel1.Controls.Add(username);
-            panel1.Location = new Point(303, 4);
+            panel1.Location = new Point(310, 4);
             panel1.Name = "panel1";
             panel1.Size = new Size(403, 59);
             panel1.TabIndex = 5;
@@ -304,7 +304,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(914, 600);
+            ClientSize = new Size(921, 600);
             Controls.Add(Subject_list_gridView);
             Controls.Add(guna2Panel2);
             Controls.Add(guna2Panel1);
