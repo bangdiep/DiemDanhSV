@@ -124,3 +124,12 @@ E:\KhanhBang\CNPM\DiemDanhSV\DiemDanhSV\obj\Debug\net8.0-windows\DiemDanhSV.PAL.
 E:\KhanhBang\CNPM\DiemDanhSV\DiemDanhSV\obj\Debug\net8.0-windows\DiemDanhSV.PAL.Forms.FormAttendanceInstructor.resources
 E:\KhanhBang\CNPM\DiemDanhSV\DiemDanhSV\obj\Debug\net8.0-windows\DiemDanhSV.PAL.Forms.FormDashboardInstructor.resources
 E:\KhanhBang\CNPM\DiemDanhSV\DiemDanhSV\obj\Debug\net8.0-windows\DiemDanhSV.PAL.Forms.Test.resources
+E:\KhanhBang\CNPM\DiemDanhSV\DiemDanhSV\bin\Debug\net8.0-windows\ClosedXML.dll
+E:\KhanhBang\CNPM\DiemDanhSV\DiemDanhSV\bin\Debug\net8.0-windows\ClosedXML.Parser.dll
+E:\KhanhBang\CNPM\DiemDanhSV\DiemDanhSV\bin\Debug\net8.0-windows\DocumentFormat.OpenXml.dll
+E:\KhanhBang\CNPM\DiemDanhSV\DiemDanhSV\bin\Debug\net8.0-windows\DocumentFormat.OpenXml.Framework.dll
+E:\KhanhBang\CNPM\DiemDanhSV\DiemDanhSV\bin\Debug\net8.0-windows\ExcelNumberFormat.dll
+E:\KhanhBang\CNPM\DiemDanhSV\DiemDanhSV\bin\Debug\net8.0-windows\OpenXmlPowerTools.dll
+E:\KhanhBang\CNPM\DiemDanhSV\DiemDanhSV\bin\Debug\net8.0-windows\RBush.dll
+E:\KhanhBang\CNPM\DiemDanhSV\DiemDanhSV\bin\Debug\net8.0-windows\SixLabors.Fonts.dll
+E:\KhanhBang\CNPM\DiemDanhSV\DiemDanhSV\bin\Debug\net8.0-windows\System.Management.Automation.dll

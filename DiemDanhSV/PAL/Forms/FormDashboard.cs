@@ -1,4 +1,5 @@
-﻿using DiemDanhSV.Models;
+﻿using DiemDanhSV.Controller;
+using DiemDanhSV.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,11 +14,12 @@ namespace DiemDanhSV.PAL.Forms
 {
     public partial class FormDashboard : Form
     {
-        Users instructor;
-        public FormDashboard(Users u)
+        
+        private AdminController adminController;
+        public FormDashboard()
         {
             InitializeComponent();
-            instructor = u;
+            adminController = new AdminController();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -43,6 +45,34 @@ namespace DiemDanhSV.PAL.Forms
         private void FormDashboard_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnSelect_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog
+            {
+                Filter = "Excel Files|*.xlsx;*.xls",
+                Title = "Chọn file Excel"
+            };
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string filePath = openFileDialog.FileName;
+                try
+                {
+                    // Đọc thông tin user từ file Excel
+                    var users = adminController.ReadUsersFromExcel(filePath);
+
+                    // Lưu thông tin user vào database
+                        adminController.SaveUsersToDatabase(users);
+
+                    MessageBox.Show("Tải dữ liệu lên thành công!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Có lỗi xảy ra: " + ex.Message);
+                }
+            }
         }
     }
 }

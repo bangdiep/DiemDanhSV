@@ -110,6 +110,10 @@ namespace DiemDanhSV.PAL.Forms
 
                         this.Hide();
 
+                    }else if(user.Role == 0){
+                        FormDashboard formAddUser = new FormDashboard();
+                        formAddUser.Show();
+                        this.Hide();
                     }
 
                 }

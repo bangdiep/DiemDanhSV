@@ -1,5 +1,8 @@
 ﻿using DiemDanhSV.Database;
-using DiemDanhSV.Models;
+using DiemDanhModels = DiemDanhSV.Models;
+using DocumentFormat.OpenXml.Spreadsheet;
+using DocumentFormat.OpenXml.Wordprocessing;
+using Microsoft.VisualBasic.ApplicationServices;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -11,9 +14,9 @@ namespace DiemDanhSV.Repository
 {
     internal class UsersRepository
     {
-        public List<Users> findAll()
+        public List<DiemDanhModels.Users> findAll()
         {
-            List<Users> users = new List<Users>();
+            List<DiemDanhModels.Users> users = new List<DiemDanhModels.Users>();
 
             using (MySqlConnection connection = DatabaseConnection.GetConnection())
             {
@@ -24,8 +27,8 @@ namespace DiemDanhSV.Repository
                     using (MySqlDataReader reader = cmd.ExecuteReader())
                     {
                         while (reader.Read())
-                        { 
-                            Users user = Users.FromDataReader(reader);
+                        {
+                            DiemDanhModels.Users user = DiemDanhModels.Users.FromDataReader(reader);
                             users.Add(user);
                         }
                     }
@@ -35,7 +38,7 @@ namespace DiemDanhSV.Repository
             }
         }
 
-        public Users findByUsername(string username)
+        public DiemDanhModels.Users findByUsername(string username)
         {
             using (MySqlConnection connection = DatabaseConnection.GetConnection())
             {
@@ -52,7 +55,7 @@ namespace DiemDanhSV.Repository
                         if (reader.Read())
                         {
                             //reader.Read();
-                            Users u = Users.FromDataReader(reader);
+                            DiemDanhModels.Users u = DiemDanhModels.Users.FromDataReader(reader);
                             return u;
                         }
                         else
@@ -66,15 +69,38 @@ namespace DiemDanhSV.Repository
             }
         }
 
-        public bool adddUser(Users user)
+        //public bool adddUser(DiemDanhModels.Users user)
+        //{
+        //    using (MySqlConnection connection = DatabaseConnection.GetConnection())
+        //    {
+        //        string query = "INSERT INTO Users (userID, fullName, userName, passwords, email, gender, roles) " +
+        //                 "VALUES (@userID, @fullName, @userName, @passwords, @email, @gender, @roles)";
+
+        //        using (MySqlCommand cmd = new MySqlCommand(query, connection))
+        //        {
+        //            cmd.Parameters.AddWithValue("@userID", user.UserID);
+        //            cmd.Parameters.AddWithValue("@fullName", user.FullName);
+        //            cmd.Parameters.AddWithValue("@userName", user.UserName);
+        //            cmd.Parameters.AddWithValue("@passwords", user.Password);
+        //            cmd.Parameters.AddWithValue("@email", user.Email);
+        //            cmd.Parameters.AddWithValue("@gender", user.Gender);
+        //            cmd.Parameters.AddWithValue("@roles", user.Role);
+
+        //            int rowsAffected = cmd.ExecuteNonQuery();
+        //            return rowsAffected > 0;
+        //        }
+        //    }
+        //}
+
+        public void addUserFromExcel(List<DiemDanhModels.Users> users)
         {
             using (MySqlConnection connection = DatabaseConnection.GetConnection())
             {
-                string query = "INSERT INTO Users (userID, fullName, userName, passwords, email, gender, roles) " +
-                         "VALUES (@userID, @fullName, @userName, @passwords, @email, @gender, @roles)";
-
-                using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                foreach (var user in users)
                 {
+                    string query = "INSERT INTO Users (userID, fullName, userName, passwords, email, gender, roles) " +
+                                     "VALUES (@userID, @fullName, @userName, @passwords, @email, @gender, @roles)";
+                    MySqlCommand cmd = new MySqlCommand(query, connection);
                     cmd.Parameters.AddWithValue("@userID", user.UserID);
                     cmd.Parameters.AddWithValue("@fullName", user.FullName);
                     cmd.Parameters.AddWithValue("@userName", user.UserName);
@@ -82,9 +108,7 @@ namespace DiemDanhSV.Repository
                     cmd.Parameters.AddWithValue("@email", user.Email);
                     cmd.Parameters.AddWithValue("@gender", user.Gender);
                     cmd.Parameters.AddWithValue("@roles", user.Role);
-
-                    int rowsAffected = cmd.ExecuteNonQuery();
-                    return rowsAffected > 0;
+                    cmd.ExecuteNonQuery();
                 }
             }
         }
