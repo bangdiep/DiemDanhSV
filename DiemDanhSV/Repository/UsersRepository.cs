@@ -51,7 +51,6 @@ namespace DiemDanhSV.Repository
 
                     using (MySqlDataReader reader = cmd.ExecuteReader())
                     {
-                        //connection.Open();
                         if (reader.Read())
                         {
                             //reader.Read();
@@ -69,28 +68,28 @@ namespace DiemDanhSV.Repository
             }
         }
 
-        //public bool adddUser(DiemDanhModels.Users user)
-        //{
-        //    using (MySqlConnection connection = DatabaseConnection.GetConnection())
-        //    {
-        //        string query = "INSERT INTO Users (userID, fullName, userName, passwords, email, gender, roles) " +
-        //                 "VALUES (@userID, @fullName, @userName, @passwords, @email, @gender, @roles)";
+        public bool adddUser(DiemDanhModels.Users user)
+        {
+            using (MySqlConnection connection = DatabaseConnection.GetConnection())
+            {
+                string query = "INSERT INTO Users (userID, fullName, userName, passwords, email, gender, roles) " +
+                         "VALUES (@userID, @fullName, @userName, @passwords, @email, @gender, @roles)";
 
-        //        using (MySqlCommand cmd = new MySqlCommand(query, connection))
-        //        {
-        //            cmd.Parameters.AddWithValue("@userID", user.UserID);
-        //            cmd.Parameters.AddWithValue("@fullName", user.FullName);
-        //            cmd.Parameters.AddWithValue("@userName", user.UserName);
-        //            cmd.Parameters.AddWithValue("@passwords", user.Password);
-        //            cmd.Parameters.AddWithValue("@email", user.Email);
-        //            cmd.Parameters.AddWithValue("@gender", user.Gender);
-        //            cmd.Parameters.AddWithValue("@roles", user.Role);
+                using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("@userID", user.UserID);
+                    cmd.Parameters.AddWithValue("@fullName", user.FullName);
+                    cmd.Parameters.AddWithValue("@userName", user.UserName);
+                    cmd.Parameters.AddWithValue("@passwords", user.Password);
+                    cmd.Parameters.AddWithValue("@email", user.Email);
+                    cmd.Parameters.AddWithValue("@gender", user.Gender);
+                    cmd.Parameters.AddWithValue("@roles", user.Role);
 
-        //            int rowsAffected = cmd.ExecuteNonQuery();
-        //            return rowsAffected > 0;
-        //        }
-        //    }
-        //}
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    return rowsAffected > 0;
+                }
+            }
+        }
 
         public void addUserFromExcel(List<DiemDanhModels.Users> users)
         {

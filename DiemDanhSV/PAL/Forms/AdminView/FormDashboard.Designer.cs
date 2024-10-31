@@ -1,6 +1,6 @@
 ﻿namespace DiemDanhSV.PAL.Forms
 {
-    partial class FormAddSubject
+    partial class FormDashboard
     {
         /// <summary>
         /// Required designer variable.
@@ -44,14 +44,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            btnAddSubject = new Guna.UI2.WinForms.Guna2Button();
+            btnAttendance = new Guna.UI2.WinForms.Guna2Button();
             btnLogout = new Guna.UI2.WinForms.Guna2Button();
             btnReport = new Guna.UI2.WinForms.Guna2Button();
             btnAddClass = new Guna.UI2.WinForms.Guna2Button();
@@ -59,23 +53,21 @@
             btnDashboard = new Guna.UI2.WinForms.Guna2Button();
             pictureBox1 = new PictureBox();
             guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            Admin = new Label();
+            panel1 = new Panel();
+            role = new Label();
+            username = new Label();
             pictureBox2 = new PictureBox();
-            guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            txtBoxId = new Guna.UI2.WinForms.Guna2TextBox();
-            txtBoxName = new Guna.UI2.WinForms.Guna2TextBox();
-            btnAdd = new Guna.UI2.WinForms.Guna2Button();
+            admin_dashboard_pn = new Panel();
             guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             guna2Panel2.SuspendLayout();
+            panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // guna2Panel1
             // 
-            guna2Panel1.Controls.Add(btnAddSubject);
+            guna2Panel1.Controls.Add(btnAttendance);
             guna2Panel1.Controls.Add(btnLogout);
             guna2Panel1.Controls.Add(btnReport);
             guna2Panel1.Controls.Add(btnAddClass);
@@ -85,35 +77,39 @@
             guna2Panel1.CustomizableEdges = customizableEdges13;
             guna2Panel1.Dock = DockStyle.Left;
             guna2Panel1.Location = new Point(0, 0);
+            guna2Panel1.Margin = new Padding(3, 4, 3, 4);
             guna2Panel1.Name = "guna2Panel1";
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            guna2Panel1.Size = new Size(169, 450);
-            guna2Panel1.TabIndex = 1;
+            guna2Panel1.Size = new Size(193, 600);
+            guna2Panel1.TabIndex = 0;
             // 
-            // btnAddSubject
+            // btnAttendance
             // 
-            btnAddSubject.CustomImages.Image = Properties.Resources.person_men_class_demonstration_speech_instructor_presenter_presentation_business_chart_icon_250736;
-            btnAddSubject.CustomImages.ImageAlign = HorizontalAlignment.Left;
-            btnAddSubject.CustomizableEdges = customizableEdges1;
-            btnAddSubject.DisabledState.BorderColor = Color.DarkGray;
-            btnAddSubject.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnAddSubject.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnAddSubject.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnAddSubject.FillColor = Color.Transparent;
-            btnAddSubject.Font = new Font("Segoe UI", 9F);
-            btnAddSubject.ForeColor = Color.Black;
-            btnAddSubject.HoverState.FillColor = Color.FromArgb(255, 128, 128);
-            btnAddSubject.HoverState.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAddSubject.Location = new Point(12, 228);
-            btnAddSubject.Name = "btnAddSubject";
-            btnAddSubject.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnAddSubject.Size = new Size(134, 32);
-            btnAddSubject.TabIndex = 5;
-            btnAddSubject.Text = "Add Subject";
-            btnAddSubject.TextOffset = new Point(15, 0);
+            btnAttendance.CustomImages.Image = Properties.Resources.person_men_class_demonstration_speech_instructor_presenter_presentation_business_chart_icon_250736;
+            btnAttendance.CustomImages.ImageAlign = HorizontalAlignment.Left;
+            btnAttendance.CustomizableEdges = customizableEdges1;
+            btnAttendance.DisabledState.BorderColor = Color.DarkGray;
+            btnAttendance.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnAttendance.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnAttendance.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnAttendance.FillColor = Color.Transparent;
+            btnAttendance.Font = new Font("Segoe UI", 9F);
+            btnAttendance.ForeColor = Color.Black;
+            btnAttendance.HoverState.FillColor = Color.FromArgb(255, 128, 128);
+            btnAttendance.HoverState.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAttendance.Location = new Point(14, 304);
+            btnAttendance.Margin = new Padding(3, 4, 3, 4);
+            btnAttendance.Name = "btnAttendance";
+            btnAttendance.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnAttendance.Size = new Size(153, 43);
+            btnAttendance.TabIndex = 5;
+            btnAttendance.Text = "Attendance";
+            btnAttendance.TextOffset = new Point(15, 0);
+            btnAttendance.Click += guna2Button1_Click;
             // 
             // btnLogout
             // 
+            btnLogout.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             btnLogout.CustomImages.Image = Properties.Resources.out_log_icon_218015;
             btnLogout.CustomImages.ImageAlign = HorizontalAlignment.Left;
             btnLogout.CustomizableEdges = customizableEdges3;
@@ -126,13 +122,15 @@
             btnLogout.ForeColor = Color.Black;
             btnLogout.HoverState.FillColor = Color.FromArgb(255, 128, 128);
             btnLogout.HoverState.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnLogout.Location = new Point(12, 406);
+            btnLogout.Location = new Point(14, 541);
+            btnLogout.Margin = new Padding(3, 4, 3, 4);
             btnLogout.Name = "btnLogout";
             btnLogout.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnLogout.Size = new Size(134, 32);
+            btnLogout.Size = new Size(153, 43);
             btnLogout.TabIndex = 4;
             btnLogout.Text = "Log out";
             btnLogout.TextOffset = new Point(1, 0);
+            btnLogout.Click += btnLogout_Click;
             // 
             // btnReport
             // 
@@ -148,10 +146,11 @@
             btnReport.ForeColor = Color.Black;
             btnReport.HoverState.FillColor = Color.FromArgb(255, 128, 128);
             btnReport.HoverState.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnReport.Location = new Point(12, 266);
+            btnReport.Location = new Point(14, 355);
+            btnReport.Margin = new Padding(3, 4, 3, 4);
             btnReport.Name = "btnReport";
             btnReport.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnReport.Size = new Size(134, 32);
+            btnReport.Size = new Size(153, 43);
             btnReport.TabIndex = 3;
             btnReport.Text = "Report";
             btnReport.TextOffset = new Point(1, 0);
@@ -170,13 +169,15 @@
             btnAddClass.ForeColor = Color.Black;
             btnAddClass.HoverState.FillColor = Color.FromArgb(255, 128, 128);
             btnAddClass.HoverState.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAddClass.Location = new Point(12, 190);
+            btnAddClass.Location = new Point(14, 253);
+            btnAddClass.Margin = new Padding(3, 4, 3, 4);
             btnAddClass.Name = "btnAddClass";
             btnAddClass.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            btnAddClass.Size = new Size(134, 32);
+            btnAddClass.Size = new Size(153, 43);
             btnAddClass.TabIndex = 3;
             btnAddClass.Text = "Add class";
             btnAddClass.TextOffset = new Point(8, 0);
+            btnAddClass.Click += btnAddClass_Click;
             // 
             // btnAddStudent
             // 
@@ -192,13 +193,15 @@
             btnAddStudent.ForeColor = Color.Black;
             btnAddStudent.HoverState.FillColor = Color.FromArgb(255, 128, 128);
             btnAddStudent.HoverState.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAddStudent.Location = new Point(12, 152);
+            btnAddStudent.Location = new Point(14, 203);
+            btnAddStudent.Margin = new Padding(3, 4, 3, 4);
             btnAddStudent.Name = "btnAddStudent";
             btnAddStudent.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            btnAddStudent.Size = new Size(134, 32);
+            btnAddStudent.Size = new Size(153, 43);
             btnAddStudent.TabIndex = 3;
             btnAddStudent.Text = "Add Student";
             btnAddStudent.TextOffset = new Point(15, 0);
+            btnAddStudent.Click += btnAddStudent_Click;
             // 
             // btnDashboard
             // 
@@ -214,10 +217,11 @@
             btnDashboard.ForeColor = Color.Black;
             btnDashboard.HoverState.FillColor = Color.FromArgb(255, 128, 128);
             btnDashboard.HoverState.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnDashboard.Location = new Point(12, 114);
+            btnDashboard.Location = new Point(14, 152);
+            btnDashboard.Margin = new Padding(3, 4, 3, 4);
             btnDashboard.Name = "btnDashboard";
             btnDashboard.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            btnDashboard.Size = new Size(154, 32);
+            btnDashboard.Size = new Size(176, 43);
             btnDashboard.TabIndex = 2;
             btnDashboard.Text = "Dashboard";
             btnDashboard.TextOffset = new Point(1, 0);
@@ -225,9 +229,10 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.logo_dai_hoc_ton_duc_thang_dongphucvina_vn_;
-            pictureBox1.Location = new Point(32, -10);
+            pictureBox1.Location = new Point(37, -13);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(100, 101);
+            pictureBox1.Size = new Size(114, 135);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
@@ -235,167 +240,104 @@
             // guna2Panel2
             // 
             guna2Panel2.BackColor = Color.LightCoral;
-            guna2Panel2.Controls.Add(Admin);
-            guna2Panel2.Controls.Add(pictureBox2);
+            guna2Panel2.Controls.Add(panel1);
             guna2Panel2.CustomizableEdges = customizableEdges15;
             guna2Panel2.Dock = DockStyle.Top;
-            guna2Panel2.Location = new Point(169, 0);
+            guna2Panel2.Location = new Point(193, 0);
+            guna2Panel2.Margin = new Padding(3, 4, 3, 4);
             guna2Panel2.Name = "guna2Panel2";
             guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            guna2Panel2.Size = new Size(631, 50);
-            guna2Panel2.TabIndex = 2;
+            guna2Panel2.Size = new Size(745, 67);
+            guna2Panel2.TabIndex = 1;
             // 
-            // Admin
+            // panel1
             // 
-            Admin.AutoSize = true;
-            Admin.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Admin.Location = new Point(526, 9);
-            Admin.Name = "Admin";
-            Admin.Size = new Size(43, 15);
-            Admin.TabIndex = 1;
-            Admin.Text = "Admin";
+            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            panel1.Controls.Add(role);
+            panel1.Controls.Add(username);
+            panel1.Controls.Add(pictureBox2);
+            panel1.Location = new Point(492, 5);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(204, 63);
+            panel1.TabIndex = 3;
+            // 
+            // role
+            // 
+            role.AutoSize = true;
+            role.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            role.Location = new Point(113, 38);
+            role.Name = "role";
+            role.Size = new Size(37, 20);
+            role.TabIndex = 2;
+            role.Text = "Role";
+            // 
+            // username
+            // 
+            username.AutoSize = true;
+            username.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            username.Location = new Point(113, 7);
+            username.Name = "username";
+            username.Size = new Size(56, 20);
+            username.TabIndex = 1;
+            username.Text = "Admin";
             // 
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources.account_avatar_face_man_people_profile_user_icon_123197;
-            pictureBox2.Location = new Point(479, 0);
+            pictureBox2.Location = new Point(55, 6);
+            pictureBox2.Margin = new Padding(3, 4, 3, 4);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(35, 47);
+            pictureBox2.Size = new Size(40, 50);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 0;
             pictureBox2.TabStop = false;
             // 
-            // guna2HtmlLabel1
+            // admin_dashboard_pn
             // 
-            guna2HtmlLabel1.BackColor = Color.Transparent;
-            guna2HtmlLabel1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel1.Location = new Point(175, 64);
-            guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            guna2HtmlLabel1.Size = new Size(156, 27);
-            guna2HtmlLabel1.TabIndex = 3;
-            guna2HtmlLabel1.Text = "Add New Subject";
+            admin_dashboard_pn.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            admin_dashboard_pn.Location = new Point(193, 70);
+            admin_dashboard_pn.Name = "admin_dashboard_pn";
+            admin_dashboard_pn.Size = new Size(745, 530);
+            admin_dashboard_pn.TabIndex = 2;
             // 
-            // guna2HtmlLabel2
+            // FormDashboard
             // 
-            guna2HtmlLabel2.BackColor = Color.Transparent;
-            guna2HtmlLabel2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            guna2HtmlLabel2.Location = new Point(175, 114);
-            guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            guna2HtmlLabel2.Size = new Size(84, 23);
-            guna2HtmlLabel2.TabIndex = 4;
-            guna2HtmlLabel2.Text = "Subject's ID";
-            // 
-            // guna2HtmlLabel3
-            // 
-            guna2HtmlLabel3.BackColor = Color.Transparent;
-            guna2HtmlLabel3.Font = new Font("Microsoft YaHei UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            guna2HtmlLabel3.Location = new Point(424, 114);
-            guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            guna2HtmlLabel3.Size = new Size(121, 23);
-            guna2HtmlLabel3.TabIndex = 5;
-            guna2HtmlLabel3.Text = "Subject's Name";
-            // 
-            // txtBoxId
-            // 
-            txtBoxId.CustomizableEdges = customizableEdges17;
-            txtBoxId.DefaultText = "";
-            txtBoxId.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtBoxId.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtBoxId.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtBoxId.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtBoxId.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtBoxId.Font = new Font("Segoe UI", 9F);
-            txtBoxId.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtBoxId.Location = new Point(265, 114);
-            txtBoxId.Name = "txtBoxId";
-            txtBoxId.PasswordChar = '\0';
-            txtBoxId.PlaceholderText = "";
-            txtBoxId.SelectedText = "";
-            txtBoxId.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            txtBoxId.Size = new Size(153, 27);
-            txtBoxId.TabIndex = 6;
-            // 
-            // txtBoxName
-            // 
-            txtBoxName.CustomizableEdges = customizableEdges19;
-            txtBoxName.DefaultText = "";
-            txtBoxName.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtBoxName.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtBoxName.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtBoxName.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtBoxName.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtBoxName.Font = new Font("Segoe UI", 9F);
-            txtBoxName.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtBoxName.Location = new Point(551, 114);
-            txtBoxName.Name = "txtBoxName";
-            txtBoxName.PasswordChar = '\0';
-            txtBoxName.PlaceholderText = "";
-            txtBoxName.SelectedText = "";
-            txtBoxName.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            txtBoxName.Size = new Size(178, 27);
-            txtBoxName.TabIndex = 7;
-            // 
-            // btnAdd
-            // 
-            btnAdd.BorderRadius = 10;
-            btnAdd.CustomizableEdges = customizableEdges21;
-            btnAdd.DisabledState.BorderColor = Color.DarkGray;
-            btnAdd.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnAdd.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnAdd.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnAdd.FillColor = Color.LightCoral;
-            btnAdd.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            btnAdd.ForeColor = Color.Black;
-            btnAdd.Location = new Point(735, 114);
-            btnAdd.Name = "btnAdd";
-            btnAdd.ShadowDecoration.CustomizableEdges = customizableEdges22;
-            btnAdd.Size = new Size(65, 32);
-            btnAdd.TabIndex = 8;
-            btnAdd.Text = "ADD";
-            btnAdd.Click += btnAdd_Click;
-            // 
-            // FormAddSubject
-            // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(btnAdd);
-            Controls.Add(txtBoxName);
-            Controls.Add(txtBoxId);
-            Controls.Add(guna2HtmlLabel3);
-            Controls.Add(guna2HtmlLabel2);
-            Controls.Add(guna2HtmlLabel1);
+            BackColor = SystemColors.ControlLightLight;
+            ClientSize = new Size(938, 600);
+            Controls.Add(admin_dashboard_pn);
             Controls.Add(guna2Panel2);
             Controls.Add(guna2Panel1);
-            Name = "FormAddSubject";
-            Text = "FormAddSubject";
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "FormDashboard";
+            Text = "FormDashboard";
+            Load += FormDashboard_Load;
             guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             guna2Panel2.ResumeLayout(false);
-            guna2Panel2.PerformLayout();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2Button btnAddSubject;
-        private Guna.UI2.WinForms.Guna2Button btnLogout;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+        private PictureBox pictureBox1;
+        private Guna.UI2.WinForms.Guna2Button btnDashboard;
         private Guna.UI2.WinForms.Guna2Button btnReport;
         private Guna.UI2.WinForms.Guna2Button btnAddClass;
         private Guna.UI2.WinForms.Guna2Button btnAddStudent;
-        private Guna.UI2.WinForms.Guna2Button btnDashboard;
-        private PictureBox pictureBox1;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private Label Admin;
+        private Guna.UI2.WinForms.Guna2Button btnLogout;
+        private Guna.UI2.WinForms.Guna2Button btnAttendance;
+        private Label role;
+        private Label username;
         private PictureBox pictureBox2;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
-        private Guna.UI2.WinForms.Guna2TextBox txtBoxId;
-        private Guna.UI2.WinForms.Guna2TextBox txtBoxName;
-        private Guna.UI2.WinForms.Guna2Button btnAdd;
+        private Guna.UI2.WinForms.Guna2TextBox txtboxFile;
+        private Panel admin_dashboard_pn;
+        private Panel panel1;
     }
 }

@@ -29,7 +29,7 @@ namespace DiemDanhSV.Models
             this.major = "";
         }
 
-        public Student FromDataReader(MySqlDataReader reader)
+        public static Student FromDataReader(MySqlDataReader reader)
         {
             Users u = Users.FromDataReader(reader);
             Student s = u.ToStudent();

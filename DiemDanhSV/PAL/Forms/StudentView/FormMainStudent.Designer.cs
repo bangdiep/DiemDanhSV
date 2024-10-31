@@ -1,6 +1,6 @@
 ﻿namespace DiemDanhSV.PAL.Forms
 {
-    partial class FormDashboardStudent
+    partial class FormMainStudent
     {
         /// <summary>
         /// Required designer variable.
@@ -28,20 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            btnAttendance = new Guna.UI2.WinForms.Guna2Button();
             btnLogout = new Guna.UI2.WinForms.Guna2Button();
             btnDashboard = new Guna.UI2.WinForms.Guna2Button();
             pictureBox1 = new PictureBox();
@@ -51,40 +51,60 @@
             comboboxTerm = new Guna.UI2.WinForms.Guna2ComboBox();
             role = new Label();
             username = new Label();
-            Subject_list_gridView = new Guna.UI2.WinForms.Guna2DataGridView();
-            ColumnSubject = new DataGridViewTextBoxColumn();
-            ColumnClassID = new DataGridViewTextBoxColumn();
-            ColumnShift = new DataGridViewTextBoxColumn();
-            ColumnTotal = new DataGridViewTextBoxColumn();
+            std_panel = new Panel();
             guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)Subject_list_gridView).BeginInit();
             SuspendLayout();
             // 
             // guna2Panel1
             // 
             guna2Panel1.BackColor = SystemColors.Control;
+            guna2Panel1.Controls.Add(btnAttendance);
             guna2Panel1.Controls.Add(btnLogout);
             guna2Panel1.Controls.Add(btnDashboard);
             guna2Panel1.Controls.Add(pictureBox1);
-            guna2Panel1.CustomizableEdges = customizableEdges5;
+            guna2Panel1.CustomizableEdges = customizableEdges7;
             guna2Panel1.Dock = DockStyle.Left;
             guna2Panel1.Location = new Point(0, 0);
             guna2Panel1.Margin = new Padding(3, 4, 3, 4);
             guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges8;
             guna2Panel1.Size = new Size(193, 600);
             guna2Panel1.TabIndex = 1;
+            // 
+            // btnAttendance
+            // 
+            btnAttendance.CustomImages.Image = Properties.Resources.person_men_class_demonstration_speech_instructor_presenter_presentation_business_chart_icon_250736;
+            btnAttendance.CustomImages.ImageAlign = HorizontalAlignment.Left;
+            btnAttendance.CustomizableEdges = customizableEdges1;
+            btnAttendance.DisabledState.BorderColor = Color.DarkGray;
+            btnAttendance.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnAttendance.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnAttendance.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnAttendance.FillColor = Color.Transparent;
+            btnAttendance.Font = new Font("Segoe UI", 9F);
+            btnAttendance.ForeColor = Color.Black;
+            btnAttendance.HoverState.FillColor = Color.FromArgb(255, 128, 128);
+            btnAttendance.HoverState.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAttendance.Location = new Point(14, 203);
+            btnAttendance.Margin = new Padding(3, 4, 3, 4);
+            btnAttendance.Name = "btnAttendance";
+            btnAttendance.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnAttendance.Size = new Size(153, 43);
+            btnAttendance.TabIndex = 6;
+            btnAttendance.Text = "Attendance";
+            btnAttendance.TextOffset = new Point(15, 0);
+            btnAttendance.Click += btnAttendance_Click;
             // 
             // btnLogout
             // 
             btnLogout.Anchor = AnchorStyles.Bottom;
             btnLogout.CustomImages.Image = Properties.Resources.out_log_icon_218015;
             btnLogout.CustomImages.ImageAlign = HorizontalAlignment.Left;
-            btnLogout.CustomizableEdges = customizableEdges1;
+            btnLogout.CustomizableEdges = customizableEdges3;
             btnLogout.DisabledState.BorderColor = Color.DarkGray;
             btnLogout.DisabledState.CustomBorderColor = Color.DarkGray;
             btnLogout.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -97,7 +117,7 @@
             btnLogout.Location = new Point(14, 541);
             btnLogout.Margin = new Padding(3, 4, 3, 4);
             btnLogout.Name = "btnLogout";
-            btnLogout.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnLogout.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnLogout.Size = new Size(153, 43);
             btnLogout.TabIndex = 4;
             btnLogout.Text = "Log out";
@@ -108,7 +128,7 @@
             // 
             btnDashboard.CustomImages.Image = Properties.Resources._1904661_building_dashboard_default_home_house_page_start_122511__1_;
             btnDashboard.CustomImages.ImageAlign = HorizontalAlignment.Left;
-            btnDashboard.CustomizableEdges = customizableEdges3;
+            btnDashboard.CustomizableEdges = customizableEdges5;
             btnDashboard.DisabledState.BorderColor = Color.DarkGray;
             btnDashboard.DisabledState.CustomBorderColor = Color.DarkGray;
             btnDashboard.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -121,7 +141,7 @@
             btnDashboard.Location = new Point(14, 152);
             btnDashboard.Margin = new Padding(3, 4, 3, 4);
             btnDashboard.Name = "btnDashboard";
-            btnDashboard.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnDashboard.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnDashboard.Size = new Size(176, 43);
             btnDashboard.TabIndex = 2;
             btnDashboard.Text = "Dashboard";
@@ -143,12 +163,12 @@
             guna2Panel2.BackColor = Color.LightCoral;
             guna2Panel2.Controls.Add(pictureBox2);
             guna2Panel2.Controls.Add(panel1);
-            guna2Panel2.CustomizableEdges = customizableEdges9;
+            guna2Panel2.CustomizableEdges = customizableEdges11;
             guna2Panel2.Dock = DockStyle.Top;
             guna2Panel2.Location = new Point(193, 0);
             guna2Panel2.Margin = new Padding(3, 4, 3, 4);
             guna2Panel2.Name = "guna2Panel2";
-            guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges12;
             guna2Panel2.Size = new Size(753, 67);
             guna2Panel2.TabIndex = 2;
             guna2Panel2.Paint += guna2Panel2_Paint;
@@ -179,7 +199,7 @@
             // comboboxTerm
             // 
             comboboxTerm.BackColor = Color.Transparent;
-            comboboxTerm.CustomizableEdges = customizableEdges7;
+            comboboxTerm.CustomizableEdges = customizableEdges9;
             comboboxTerm.DrawMode = DrawMode.OwnerDrawFixed;
             comboboxTerm.DropDownStyle = ComboBoxStyle.DropDownList;
             comboboxTerm.FillColor = Color.LightCoral;
@@ -191,7 +211,7 @@
             comboboxTerm.Location = new Point(22, 7);
             comboboxTerm.Margin = new Padding(3, 4, 3, 4);
             comboboxTerm.Name = "comboboxTerm";
-            comboboxTerm.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            comboboxTerm.ShadowDecoration.CustomizableEdges = customizableEdges10;
             comboboxTerm.Size = new Size(102, 36);
             comboboxTerm.TabIndex = 3;
             // 
@@ -216,84 +236,12 @@
             username.TabIndex = 1;
             username.Text = "Name";
             // 
-            // Subject_list_gridView
+            // std_panel
             // 
-            dataGridViewCellStyle1.BackColor = Color.White;
-            Subject_list_gridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            Subject_list_gridView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            Subject_list_gridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            Subject_list_gridView.ColumnHeadersHeight = 17;
-            Subject_list_gridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            Subject_list_gridView.Columns.AddRange(new DataGridViewColumn[] { ColumnSubject, ColumnClassID, ColumnShift, ColumnTotal });
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            Subject_list_gridView.DefaultCellStyle = dataGridViewCellStyle3;
-            Subject_list_gridView.GridColor = Color.FromArgb(231, 229, 255);
-            Subject_list_gridView.Location = new Point(200, 75);
-            Subject_list_gridView.Margin = new Padding(3, 4, 3, 4);
-            Subject_list_gridView.Name = "Subject_list_gridView";
-            Subject_list_gridView.RowHeadersVisible = false;
-            Subject_list_gridView.RowHeadersWidth = 51;
-            Subject_list_gridView.RowTemplate.Height = 25;
-            Subject_list_gridView.Size = new Size(735, 509);
-            Subject_list_gridView.TabIndex = 3;
-            Subject_list_gridView.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
-            Subject_list_gridView.ThemeStyle.AlternatingRowsStyle.Font = null;
-            Subject_list_gridView.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
-            Subject_list_gridView.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
-            Subject_list_gridView.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
-            Subject_list_gridView.ThemeStyle.BackColor = Color.White;
-            Subject_list_gridView.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
-            Subject_list_gridView.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
-            Subject_list_gridView.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
-            Subject_list_gridView.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
-            Subject_list_gridView.ThemeStyle.HeaderStyle.ForeColor = Color.White;
-            Subject_list_gridView.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            Subject_list_gridView.ThemeStyle.HeaderStyle.Height = 17;
-            Subject_list_gridView.ThemeStyle.ReadOnly = false;
-            Subject_list_gridView.ThemeStyle.RowsStyle.BackColor = Color.White;
-            Subject_list_gridView.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            Subject_list_gridView.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
-            Subject_list_gridView.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
-            Subject_list_gridView.ThemeStyle.RowsStyle.Height = 25;
-            Subject_list_gridView.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            Subject_list_gridView.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            // 
-            // ColumnSubject
-            // 
-            ColumnSubject.HeaderText = "Class";
-            ColumnSubject.MinimumWidth = 6;
-            ColumnSubject.Name = "ColumnSubject";
-            // 
-            // ColumnClassID
-            // 
-            ColumnClassID.HeaderText = "Class Code";
-            ColumnClassID.MinimumWidth = 6;
-            ColumnClassID.Name = "ColumnClassID";
-            // 
-            // ColumnShift
-            // 
-            ColumnShift.HeaderText = "Shift";
-            ColumnShift.MinimumWidth = 6;
-            ColumnShift.Name = "ColumnShift";
-            // 
-            // ColumnTotal
-            // 
-            ColumnTotal.HeaderText = "Total Absent";
-            ColumnTotal.MinimumWidth = 6;
-            ColumnTotal.Name = "ColumnTotal";
+            std_panel.Location = new Point(194, 72);
+            std_panel.Name = "std_panel";
+            std_panel.Size = new Size(752, 528);
+            std_panel.TabIndex = 3;
             // 
             // FormDashboardStudent
             // 
@@ -301,7 +249,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(946, 600);
-            Controls.Add(Subject_list_gridView);
+            Controls.Add(std_panel);
             Controls.Add(guna2Panel2);
             Controls.Add(guna2Panel1);
             Margin = new Padding(3, 4, 3, 4);
@@ -314,7 +262,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)Subject_list_gridView).EndInit();
             ResumeLayout(false);
         }
 
@@ -326,14 +273,11 @@
         private PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private PictureBox pictureBox2;
-        private Guna.UI2.WinForms.Guna2DataGridView Subject_list_gridView;
-        private DataGridViewTextBoxColumn ColumnSubject;
-        private DataGridViewTextBoxColumn ColumnClassID;
-        private DataGridViewTextBoxColumn ColumnShift;
-        private DataGridViewTextBoxColumn ColumnTotal;
         private Panel panel1;
         private Guna.UI2.WinForms.Guna2ComboBox comboboxTerm;
         private Label role;
         private Label username;
+        private Guna.UI2.WinForms.Guna2Button btnAttendance;
+        private Panel std_panel;
     }
 }

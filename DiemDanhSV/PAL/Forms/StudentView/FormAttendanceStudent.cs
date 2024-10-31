@@ -31,5 +31,23 @@ namespace DiemDanhSV.PAL.Forms
         {
 
         }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+                "Are you sure to log out?", // Thông điệp hiển thị
+                "Log out Confirmation", // Tiêu đề của MessageBox
+                MessageBoxButtons.YesNo, // Các nút có sẵn
+                MessageBoxIcon.Question // Biểu tượng hiển thị
+            );
+
+            // Kiểm tra kết quả từ MessageBox
+            if (result == DialogResult.Yes)
+            {
+                FormLogin login = new FormLogin();
+                login.Show();
+                this.Close();
+            }
+        }
     }
 }

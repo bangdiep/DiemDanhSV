@@ -1,25 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Compile Update="PAL\Forms\FormAddSubject.cs">
+    <Compile Update="PAL\Forms\AdminView\FormAddStudent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="PAL\Forms\FormAttendanceInstructor.cs">
+    <Compile Update="PAL\Forms\AdminView\FormAddSubject.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="PAL\Forms\FormAttendanceStudent.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="PAL\Forms\FormDashboard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="PAL\Forms\FormDashboardInstructor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="PAL\Forms\FormDashboardStudent.cs">
+    <Compile Update="PAL\Forms\AdminView\FormDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="PAL\Forms\FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="PAL\Forms\InstructorView\FormAttendanceInstructor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="PAL\Forms\InstructorView\FormDashboardInstructor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="PAL\Forms\StudentView\FormDashBoardStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="PAL\Forms\StudentView\FormAttendanceStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="PAL\Forms\StudentView\FormMainStudent.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="PAL\Forms\Test.cs">

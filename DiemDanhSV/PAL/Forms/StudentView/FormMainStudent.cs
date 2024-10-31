@@ -9,15 +9,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DiemDanhSV.PAL.Forms;
+using DiemDanhSV.PAL.Forms.StudentView;
 
 namespace DiemDanhSV.PAL.Forms
 {
-    public partial class FormDashboardStudent : Form
+    public partial class FormMainStudent : Form
     {
         private Users student;
         private UsersController usersController;
         private ClassesController classesController;
-        public FormDashboardStudent(Users std)
+        private Form currentChildForm;
+        public FormMainStudent(Users std)
         {
             InitializeComponent();
             student = std;
@@ -35,6 +38,29 @@ namespace DiemDanhSV.PAL.Forms
             username.Text = student.FullName;
             role.Text = student.UserID;
 
+            FormDashBoardStudent stdDashBoard = new FormDashBoardStudent(this.student);
+            openChildFrom((Form) stdDashBoard);
+            Task.Run(() =>
+            {
+
+            });
+
+        }
+
+        private void openChildFrom(Form childForm)
+        {
+            if (currentChildForm != null)
+            {
+                currentChildForm.Close();
+            }
+            currentChildForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            std_panel.Controls.Add(childForm);
+            std_panel.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -53,31 +79,10 @@ namespace DiemDanhSV.PAL.Forms
                 login.Show();
                 this.Close();
             }
-            else if (result == DialogResult.No)
-            {
-
-            }
         }
 
-        public void LoadData()
+        private void btnAttendance_Click(object sender, EventArgs e)
         {
-            List<StudentClassInfo> std_class = classesController.getStudentClassInfoByID(student.UserID);
-
-
-            // Cập nhật DataGridView trên UI thread
-            this.Invoke((MethodInvoker)delegate
-            {
-                // Xóa các hàng hiện có (nếu cần)
-                Subject_list_gridView.Rows.Clear();
-
-                // Thêm dữ liệu vào DataGridView
-                foreach (StudentClassInfo u in std_class)
-                {
-                    Subject_list_gridView.Rows.Add(u.SubjectName, u.ClassID, u.ShiftID, 0);
-                }
-
-                this.Cursor = Cursors.Default;
-            });
 
         }
     }

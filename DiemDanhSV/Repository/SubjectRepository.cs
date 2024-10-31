@@ -27,5 +27,29 @@ namespace DiemDanhSV.Repository
                 }
             }
         }
+
+        public List<Subject> findAll()
+        {
+            List<Subject> users = new List<Subject>();
+
+            using (MySqlConnection connection = DatabaseConnection.GetConnection())
+            {
+                string query = "SELECT * FROM Users";
+
+                using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                {
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Subject user = Subject.FromDataReader(reader);
+                            users.Add(user);
+                        }
+                    }
+                }
+
+                return users;
+            }
+        }
     }
 }

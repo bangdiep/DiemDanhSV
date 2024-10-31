@@ -88,9 +88,6 @@ namespace DiemDanhSV.PAL.Forms
 
                     if (user.Role == 1)
                     {
-                        //MessageBox.Show("Instructor");
-                        //FormDashboard dash = new FormDashboard();
-
                         Instructor inst = user.ToInstructor();
                         FormDashboardInstructor instructor = new FormDashboardInstructor(inst);
                         instructor.Show();
@@ -100,19 +97,20 @@ namespace DiemDanhSV.PAL.Forms
                     else if (user.Role == 2)
                     {
                         Student std = user.ToStudent();
-                        FormDashboardStudent student = new FormDashboardStudent(std);
+                        FormMainStudent student = new FormMainStudent((Users) std);
                         student.Show();
-
-                        Task.Run(() =>
-                        {
-                            student.LoadData();
-                        });
-
                         this.Hide();
 
                     }else if(user.Role == 0){
-                        FormDashboard formAddUser = new FormDashboard();
-                        formAddUser.Show();
+                        FormDashboard admin = new FormDashboard();
+                        admin.Show();
+
+                        //Task.Run(() =>
+                        //{
+                        //    admin.LoadData();
+                        //});
+
+
                         this.Hide();
                     }
 

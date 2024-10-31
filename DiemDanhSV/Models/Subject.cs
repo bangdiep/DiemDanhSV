@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,6 +28,14 @@ namespace DiemDanhSV.Models
         {
             subjectId = id;
             subjectName = name;
+        }
+
+        public static Subject FromDataReader(MySqlDataReader reader)
+        {
+            return new Subject(
+                reader.GetString("subID"),
+                reader.GetString("subjectName")
+            );
         }
     }
 }

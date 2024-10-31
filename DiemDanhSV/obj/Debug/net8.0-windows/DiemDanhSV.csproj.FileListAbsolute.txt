@@ -27,7 +27,6 @@ E:\KhanhBang\CNPM\DiemDanhSV\DiemDanhSV\obj\Debug\net8.0-windows\DiemDanhSV.PAL.
 D:\University\HK7\CongNghe_PhanMem\Thuc_Hanh\Project\Attendance\DiemDanhSV\obj\Debug\net8.0-windows\DiemDanhSV.csproj.AssemblyReference.cache
 D:\University\HK7\CongNghe_PhanMem\Thuc_Hanh\Project\Attendance\DiemDanhSV\obj\Debug\net8.0-windows\DiemDanhSV.PAL.Forms.FormAttendanceStudent.resources
 D:\University\HK7\CongNghe_PhanMem\Thuc_Hanh\Project\Attendance\DiemDanhSV\obj\Debug\net8.0-windows\DiemDanhSV.PAL.Forms.FormDashboard.resources
-D:\University\HK7\CongNghe_PhanMem\Thuc_Hanh\Project\Attendance\DiemDanhSV\obj\Debug\net8.0-windows\DiemDanhSV.PAL.Forms.FormDashboardStudent.resources
 D:\University\HK7\CongNghe_PhanMem\Thuc_Hanh\Project\Attendance\DiemDanhSV\obj\Debug\net8.0-windows\DiemDanhSV.PAL.Forms.FormLogin.resources
 D:\University\HK7\CongNghe_PhanMem\Thuc_Hanh\Project\Attendance\DiemDanhSV\obj\Debug\net8.0-windows\DiemDanhSV.Properties.Resources.resources
 D:\University\HK7\CongNghe_PhanMem\Thuc_Hanh\Project\Attendance\DiemDanhSV\obj\Debug\net8.0-windows\DiemDanhSV.csproj.GenerateResource.cache
@@ -133,3 +132,18 @@ E:\KhanhBang\CNPM\DiemDanhSV\DiemDanhSV\bin\Debug\net8.0-windows\OpenXmlPowerToo
 E:\KhanhBang\CNPM\DiemDanhSV\DiemDanhSV\bin\Debug\net8.0-windows\RBush.dll
 E:\KhanhBang\CNPM\DiemDanhSV\DiemDanhSV\bin\Debug\net8.0-windows\SixLabors.Fonts.dll
 E:\KhanhBang\CNPM\DiemDanhSV\DiemDanhSV\bin\Debug\net8.0-windows\System.Management.Automation.dll
+D:\University\HK7\CongNghe_PhanMem\Thuc_Hanh\Project\Attendance\DiemDanhSV\bin\Debug\net8.0-windows\ClosedXML.dll
+D:\University\HK7\CongNghe_PhanMem\Thuc_Hanh\Project\Attendance\DiemDanhSV\bin\Debug\net8.0-windows\ClosedXML.Parser.dll
+D:\University\HK7\CongNghe_PhanMem\Thuc_Hanh\Project\Attendance\DiemDanhSV\bin\Debug\net8.0-windows\DocumentFormat.OpenXml.dll
+D:\University\HK7\CongNghe_PhanMem\Thuc_Hanh\Project\Attendance\DiemDanhSV\bin\Debug\net8.0-windows\DocumentFormat.OpenXml.Framework.dll
+D:\University\HK7\CongNghe_PhanMem\Thuc_Hanh\Project\Attendance\DiemDanhSV\bin\Debug\net8.0-windows\ExcelNumberFormat.dll
+D:\University\HK7\CongNghe_PhanMem\Thuc_Hanh\Project\Attendance\DiemDanhSV\bin\Debug\net8.0-windows\OpenXmlPowerTools.dll
+D:\University\HK7\CongNghe_PhanMem\Thuc_Hanh\Project\Attendance\DiemDanhSV\bin\Debug\net8.0-windows\RBush.dll
+D:\University\HK7\CongNghe_PhanMem\Thuc_Hanh\Project\Attendance\DiemDanhSV\bin\Debug\net8.0-windows\SixLabors.Fonts.dll
+D:\University\HK7\CongNghe_PhanMem\Thuc_Hanh\Project\Attendance\DiemDanhSV\bin\Debug\net8.0-windows\System.Management.Automation.dll
+D:\University\HK7\CongNghe_PhanMem\Thuc_Hanh\Project\Attendance\DiemDanhSV\obj\Debug\net8.0-windows\DiemDanhSV.PAL.Forms.FormAddSubject.resources
+D:\University\HK7\CongNghe_PhanMem\Thuc_Hanh\Project\Attendance\DiemDanhSV\obj\Debug\net8.0-windows\DiemDanhSV.PAL.Forms.FormAttendanceInstructor.resources
+D:\University\HK7\CongNghe_PhanMem\Thuc_Hanh\Project\Attendance\DiemDanhSV\obj\Debug\net8.0-windows\DiemDanhSV.PAL.Forms.FormDashboardInstructor.resources
+D:\University\HK7\CongNghe_PhanMem\Thuc_Hanh\Project\Attendance\DiemDanhSV\obj\Debug\net8.0-windows\DiemDanhSV.PAL.Forms.AdminView.FormAddStudent.resources
+D:\University\HK7\CongNghe_PhanMem\Thuc_Hanh\Project\Attendance\DiemDanhSV\obj\Debug\net8.0-windows\DiemDanhSV.PAL.Forms.StudentView.FormDashBoardStudent.resources
+D:\University\HK7\CongNghe_PhanMem\Thuc_Hanh\Project\Attendance\DiemDanhSV\obj\Debug\net8.0-windows\DiemDanhSV.PAL.Forms.FormMainStudent.resources

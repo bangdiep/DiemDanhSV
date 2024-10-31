@@ -34,5 +34,10 @@ namespace DiemDanhSV.Controller
             
         }
 
+        public bool addUser(Users user)
+        {
+            return usersRepository.adddUser(user);
+        }
+
     }
 }
