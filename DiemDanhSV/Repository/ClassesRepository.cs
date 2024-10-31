@@ -1,4 +1,5 @@
-﻿using DiemDanhSV.Database;
+﻿using ClosedXML.Excel;
+using DiemDanhSV.Database;
 using DiemDanhSV.Models;
 using MySql.Data.MySqlClient;
 using System;
@@ -43,6 +44,34 @@ namespace DiemDanhSV.Repository
             return info;
         }
 
+        public List<Classes> findAll()
+        {
+            List<Classes> classes = new List<Classes>();
+
+            using (MySqlConnection connection = DatabaseConnection.GetConnection())
+            {
+                string query = "SELECT * FROM Class";
+
+                using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                {
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            //DiemDanhModels.Users user = DiemDanhModels.Users.FromDataReader(reader);
+                            //users.Add(user);
+                            Classes cls = Classes.FromDataReader(reader);
+                            classes.Add(cls);
+                        }
+                    }
+                }
+
+                return classes;
+            }
+        }
+
         
+
+
     }
 }

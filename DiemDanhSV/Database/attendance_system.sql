@@ -49,6 +49,7 @@ create table Class (
     tcID char(8),
     sjID char(6),
     shID char(3),
+    formLink varchar(200),
     constraint Pk_c primary key (classID),
     constraint Fk_c_tc foreign key (tcID) references Instructor(inID),
     constraint Fk_c_sj foreign key (sjID) references Subjects(subID),

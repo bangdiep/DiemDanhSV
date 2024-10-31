@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,7 @@ namespace DiemDanhSV.Models
         private string teacher;
         private string subject;
         private string shift;
+        private string formLink = "";
 
         public string ClassID
         {
@@ -53,6 +55,12 @@ namespace DiemDanhSV.Models
             set { teacher = value; }
         }
 
+        public string FromLink
+        {
+            get { return formLink; }
+            set { formLink = value; }
+        }
+
         public Classes(string id, string type, string room, string term, string teacher, string subject, string shift)
         {
             this.classID = id;
@@ -62,6 +70,20 @@ namespace DiemDanhSV.Models
             this.teacher = teacher;
             this.subject = subject;
             this.shift = shift;
+        }
+
+        public static Classes FromDataReader(MySqlDataReader reader)
+        {
+            return new Classes(
+                reader.GetString("classID"),
+                reader.GetString("Ctype"),
+                reader.GetString("room"),
+                reader.GetString("term"),
+                reader.GetString("tcID"),
+                reader.GetString("sjID"),
+                reader.GetString("shID")
+            );
+
         }
     }
 }
