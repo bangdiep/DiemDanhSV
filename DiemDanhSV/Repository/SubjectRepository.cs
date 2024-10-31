@@ -30,11 +30,11 @@ namespace DiemDanhSV.Repository
 
         public List<Subject> findAll()
         {
-            List<Subject> users = new List<Subject>();
+            List<Subject> subjects = new List<Subject>();
 
             using (MySqlConnection connection = DatabaseConnection.GetConnection())
             {
-                string query = "SELECT * FROM Users";
+                string query = "SELECT * FROM Subjects";
 
                 using (MySqlCommand cmd = new MySqlCommand(query, connection))
                 {
@@ -42,13 +42,13 @@ namespace DiemDanhSV.Repository
                     {
                         while (reader.Read())
                         {
-                            Subject user = Subject.FromDataReader(reader);
-                            users.Add(user);
+                            Subject subject = Subject.FromDataReader(reader);
+                            subjects.Add(subject);
                         }
                     }
                 }
 
-                return users;
+                return subjects;
             }
         }
     }
