@@ -51,6 +51,7 @@
             comboboxTerm = new Guna.UI2.WinForms.Guna2ComboBox();
             role = new Label();
             username = new Label();
+            pn_formDBInst = new Panel();
             Subject_list_gridView = new Guna.UI2.WinForms.Guna2DataGridView();
             ColumnSubject = new DataGridViewTextBoxColumn();
             columnClassCode = new DataGridViewTextBoxColumn();
@@ -61,6 +62,7 @@
             guna2Panel2.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            pn_formDBInst.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)Subject_list_gridView).BeginInit();
             SuspendLayout();
             // 
@@ -215,6 +217,15 @@
             username.TabIndex = 1;
             username.Text = "Name";
             // 
+            // pn_formDBInst
+            // 
+            pn_formDBInst.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            pn_formDBInst.Controls.Add(Subject_list_gridView);
+            pn_formDBInst.Location = new Point(193, 67);
+            pn_formDBInst.Name = "pn_formDBInst";
+            pn_formDBInst.Size = new Size(728, 533);
+            pn_formDBInst.TabIndex = 4;
+            // 
             // Subject_list_gridView
             // 
             Subject_list_gridView.AllowUserToDeleteRows = false;
@@ -239,16 +250,17 @@
             dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             Subject_list_gridView.DefaultCellStyle = dataGridViewCellStyle3;
+            Subject_list_gridView.Dock = DockStyle.Fill;
             Subject_list_gridView.GridColor = Color.FromArgb(231, 229, 255);
-            Subject_list_gridView.Location = new Point(200, 87);
+            Subject_list_gridView.Location = new Point(0, 0);
             Subject_list_gridView.Margin = new Padding(3, 4, 3, 4);
             Subject_list_gridView.Name = "Subject_list_gridView";
             Subject_list_gridView.ReadOnly = true;
             Subject_list_gridView.RowHeadersVisible = false;
             Subject_list_gridView.RowHeadersWidth = 51;
             Subject_list_gridView.RowTemplate.Height = 25;
-            Subject_list_gridView.Size = new Size(701, 497);
-            Subject_list_gridView.TabIndex = 4;
+            Subject_list_gridView.Size = new Size(728, 533);
+            Subject_list_gridView.TabIndex = 7;
             Subject_list_gridView.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             Subject_list_gridView.ThemeStyle.AlternatingRowsStyle.Font = null;
             Subject_list_gridView.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
@@ -270,9 +282,11 @@
             Subject_list_gridView.ThemeStyle.RowsStyle.Height = 25;
             Subject_list_gridView.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             Subject_list_gridView.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            Subject_list_gridView.CellContentClick += Subject_list_gridView_CellContentClick;
             // 
             // ColumnSubject
             // 
+            ColumnSubject.DataPropertyName = "subjectName";
             ColumnSubject.HeaderText = "Subject";
             ColumnSubject.MinimumWidth = 6;
             ColumnSubject.Name = "ColumnSubject";
@@ -280,6 +294,7 @@
             // 
             // columnClassCode
             // 
+            columnClassCode.DataPropertyName = "ClassID";
             columnClassCode.HeaderText = "Class";
             columnClassCode.MinimumWidth = 6;
             columnClassCode.Name = "columnClassCode";
@@ -287,6 +302,7 @@
             // 
             // columnType
             // 
+            columnType.DataPropertyName = "Ctype";
             columnType.HeaderText = "Type Class";
             columnType.MinimumWidth = 6;
             columnType.Name = "columnType";
@@ -294,6 +310,7 @@
             // 
             // columnTerm
             // 
+            columnTerm.DataPropertyName = "term";
             columnTerm.HeaderText = "Term";
             columnTerm.MinimumWidth = 6;
             columnTerm.Name = "columnTerm";
@@ -305,7 +322,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(921, 600);
-            Controls.Add(Subject_list_gridView);
+            Controls.Add(pn_formDBInst);
             Controls.Add(guna2Panel2);
             Controls.Add(guna2Panel1);
             Margin = new Padding(3, 4, 3, 4);
@@ -318,6 +335,7 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            pn_formDBInst.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)Subject_list_gridView).EndInit();
             ResumeLayout(false);
         }
@@ -329,15 +347,16 @@
         private Guna.UI2.WinForms.Guna2Button btnDashboard;
         private PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private Guna.UI2.WinForms.Guna2DataGridView Subject_list_gridView;
-        private DataGridViewTextBoxColumn ColumnSubject;
-        private DataGridViewTextBoxColumn columnClassCode;
-        private DataGridViewTextBoxColumn columnType;
-        private DataGridViewTextBoxColumn columnTerm;
         private Panel panel1;
         private Guna.UI2.WinForms.Guna2ComboBox comboboxTerm;
         private Label role;
         private Label username;
         private PictureBox pictureBox2;
+        private Panel pn_formDBInst;
+        private Guna.UI2.WinForms.Guna2DataGridView Subject_list_gridView;
+        private DataGridViewTextBoxColumn ColumnSubject;
+        private DataGridViewTextBoxColumn columnClassCode;
+        private DataGridViewTextBoxColumn columnType;
+        private DataGridViewTextBoxColumn columnTerm;
     }
 }

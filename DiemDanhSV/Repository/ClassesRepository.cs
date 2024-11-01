@@ -95,6 +95,44 @@ namespace DiemDanhSV.Repository
             }
         }
 
+        public DataTable getDataClassByInID(string inID)
+        {
+            DataTable dt = new DataTable();
+            using (MySqlConnection connection = DatabaseConnection.GetConnection())
+            {
+                string query = "SELECT Class.classID, Subjects.subjectName, Class.Ctype, Class.term FROM Class JOIN Subjects ON Class.sjID = Subjects.subID WHERE Class.tcID = @inID;";
+
+                using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("@inID", inID);
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                    adapter.Fill(dt); // Đổ dữ liệu vào DataTable
+                }
+                connection.Close();
+            }
+
+            return dt; // Trả về DataTable chứa dữ liệu
+        }
+
+        public string getLinkByClassID(string classID)
+        {
+            string link = string.Empty; // Khởi tạo biến link với giá trị mặc định
+            using (MySqlConnection connection = DatabaseConnection.GetConnection())
+            {
+                // Sửa từ FORM thành FROM
+                string query = "SELECT formLink FROM class WHERE classID = @classID";
+
+                using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("@classID", classID);
+                    // Thực thi truy vấn và lấy kết quả
+                    object result = cmd.ExecuteScalar();
+                    link = result != null ? result.ToString() : string.Empty; // Kiểm tra null trước khi chuyển đổi
+                }
+            }
+
+            return link;
+        }
 
     }
 }
