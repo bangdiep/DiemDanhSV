@@ -24,11 +24,10 @@ namespace DiemDanhSV.Models
             this.degree = "";
         }
 
-        public Instructor FromDataReader(MySqlDataReader reader)
+        public static Instructor FromDataReader(MySqlDataReader reader)
         {
             Users u = Users.FromDataReader(reader);
             Instructor inst = u.ToInstructor();
-            //s.SetMajor(reader.GetString("major"));
             inst.degree = reader.GetString("degree");
             return inst;
         }

@@ -147,3 +147,7 @@ D:\University\HK7\CongNghe_PhanMem\Thuc_Hanh\Project\Attendance\DiemDanhSV\obj\D
 D:\University\HK7\CongNghe_PhanMem\Thuc_Hanh\Project\Attendance\DiemDanhSV\obj\Debug\net8.0-windows\DiemDanhSV.PAL.Forms.AdminView.FormAddStudent.resources
 D:\University\HK7\CongNghe_PhanMem\Thuc_Hanh\Project\Attendance\DiemDanhSV\obj\Debug\net8.0-windows\DiemDanhSV.PAL.Forms.StudentView.FormDashBoardStudent.resources
 D:\University\HK7\CongNghe_PhanMem\Thuc_Hanh\Project\Attendance\DiemDanhSV\obj\Debug\net8.0-windows\DiemDanhSV.PAL.Forms.FormMainStudent.resources
+D:\University\HK7\CongNghe_PhanMem\Thuc_Hanh\Project\Attendance\DiemDanhSV\obj\Debug\net8.0-windows\DiemDanhSV.PAL.Forms.AdminView.FormAddClass.resources
+D:\University\HK7\CongNghe_PhanMem\Thuc_Hanh\Project\Attendance\DiemDanhSV\obj\Debug\net8.0-windows\DiemDanhSV.PAL.Forms.AdminView.FormAddInstructor.resources
+D:\University\HK7\CongNghe_PhanMem\Thuc_Hanh\Project\Attendance\DiemDanhSV\obj\Debug\net8.0-windows\DiemDanhSV.PAL.Forms.InstructorView.FormAttendanceView.resources
+D:\University\HK7\CongNghe_PhanMem\Thuc_Hanh\Project\Attendance\DiemDanhSV\obj\Debug\net8.0-windows\DiemDanhSV.PAL.Forms.InstructorView.FormDashboardView.resources

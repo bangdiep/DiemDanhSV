@@ -30,6 +30,8 @@
         {
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -46,9 +48,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            btn_add_instructor = new Guna.UI2.WinForms.Guna2Button();
             btn_add_class = new Guna.UI2.WinForms.Guna2Button();
             btnAttendance = new Guna.UI2.WinForms.Guna2Button();
             btnLogout = new Guna.UI2.WinForms.Guna2Button();
@@ -63,7 +64,6 @@
             username = new Label();
             pictureBox2 = new PictureBox();
             admin_dashboard_pn = new Panel();
-            btn_add_instructor = new Guna.UI2.WinForms.Guna2Button();
             guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             guna2Panel2.SuspendLayout();
@@ -90,6 +90,30 @@
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges18;
             guna2Panel1.Size = new Size(193, 600);
             guna2Panel1.TabIndex = 0;
+            // 
+            // btn_add_instructor
+            // 
+            btn_add_instructor.CustomImages.Image = Properties.Resources.classmates_team_people_group_class_icon_220465;
+            btn_add_instructor.CustomImages.ImageAlign = HorizontalAlignment.Left;
+            btn_add_instructor.CustomizableEdges = customizableEdges1;
+            btn_add_instructor.DisabledState.BorderColor = Color.DarkGray;
+            btn_add_instructor.DisabledState.CustomBorderColor = Color.DarkGray;
+            btn_add_instructor.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btn_add_instructor.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btn_add_instructor.FillColor = Color.Transparent;
+            btn_add_instructor.Font = new Font("Segoe UI", 9F);
+            btn_add_instructor.ForeColor = Color.Black;
+            btn_add_instructor.HoverState.FillColor = Color.FromArgb(255, 128, 128);
+            btn_add_instructor.HoverState.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_add_instructor.Location = new Point(15, 322);
+            btn_add_instructor.Margin = new Padding(3, 4, 3, 4);
+            btn_add_instructor.Name = "btn_add_instructor";
+            btn_add_instructor.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btn_add_instructor.Size = new Size(153, 43);
+            btn_add_instructor.TabIndex = 7;
+            btn_add_instructor.Text = "Add Instructor";
+            btn_add_instructor.TextOffset = new Point(8, 0);
+            btn_add_instructor.Click += btn_add_instructor_Click;
             // 
             // btn_add_class
             // 
@@ -332,29 +356,6 @@
             admin_dashboard_pn.Name = "admin_dashboard_pn";
             admin_dashboard_pn.Size = new Size(745, 530);
             admin_dashboard_pn.TabIndex = 2;
-            // 
-            // btn_add_instructor
-            // 
-            btn_add_instructor.CustomImages.Image = Properties.Resources.classmates_team_people_group_class_icon_220465;
-            btn_add_instructor.CustomImages.ImageAlign = HorizontalAlignment.Left;
-            btn_add_instructor.CustomizableEdges = customizableEdges1;
-            btn_add_instructor.DisabledState.BorderColor = Color.DarkGray;
-            btn_add_instructor.DisabledState.CustomBorderColor = Color.DarkGray;
-            btn_add_instructor.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btn_add_instructor.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btn_add_instructor.FillColor = Color.Transparent;
-            btn_add_instructor.Font = new Font("Segoe UI", 9F);
-            btn_add_instructor.ForeColor = Color.Black;
-            btn_add_instructor.HoverState.FillColor = Color.FromArgb(255, 128, 128);
-            btn_add_instructor.HoverState.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn_add_instructor.Location = new Point(15, 322);
-            btn_add_instructor.Margin = new Padding(3, 4, 3, 4);
-            btn_add_instructor.Name = "btn_add_instructor";
-            btn_add_instructor.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btn_add_instructor.Size = new Size(153, 43);
-            btn_add_instructor.TabIndex = 7;
-            btn_add_instructor.Text = "Add Instructor";
-            btn_add_instructor.TextOffset = new Point(8, 0);
             // 
             // FormDashboard
             // 

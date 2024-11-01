@@ -1,6 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Compile Update="PAL\Forms\AdminView\FormAddClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="PAL\Forms\AdminView\FormAddInstructor.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="PAL\Forms\AdminView\FormAddStudent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -16,7 +22,13 @@
     <Compile Update="PAL\Forms\InstructorView\FormAttendanceInstructor.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="PAL\Forms\InstructorView\FormAttendanceView.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="PAL\Forms\InstructorView\FormDashboardInstructor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="PAL\Forms\InstructorView\FormDashboardView.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="PAL\Forms\StudentView\FormDashBoardStudent.cs">

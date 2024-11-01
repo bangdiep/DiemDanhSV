@@ -54,35 +54,22 @@ namespace DiemDanhSV.Controller
             return classes;
         }
 
-        //public bool? addClass(Classes cls)
-        //{
-        //    // add user 
-        //    bool addUser = classesRepository;
+        public bool? addClass(Classes cls)
+        {
+            
+        }
 
-        //    if (addUser)
-        //    {
-        //        // add student 
-        //        bool addStudent = studentRepository.addStudent(student);
-
-        //        return addStudent;
-        //    }
-        //    else
-        //    {
-        //        return null;
-        //    }
-        //}
-
-        //public bool addClassFromList(List<Classes> classes)
-        //{
-        //    foreach (Classes std in classes)
-        //    {
-        //        bool? result = this.addStudent(std);
-        //        if (result == null)
-        //        {
-        //            throw new Exception($"Cannot add student with ID: {std.UserID}");
-        //        }
-        //    }
-        //    return true;
-        //}
+        public bool addClassFromList(List<Classes> classes)
+        {
+            foreach (Classes std in classes)
+            {
+                bool? result = this.addStudent(std);
+                if (result == null)
+                {
+                    throw new Exception($"Cannot add student with ID: {std.UserID}");
+                }
+            }
+            return true;
+        }
     }
 }

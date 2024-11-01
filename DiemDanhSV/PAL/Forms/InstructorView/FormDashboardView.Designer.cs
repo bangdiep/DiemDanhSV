@@ -117,7 +117,6 @@
             Subject_list_gridView.ThemeStyle.RowsStyle.Height = 25;
             Subject_list_gridView.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             Subject_list_gridView.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            Subject_list_gridView.CellContentClick += this.Subject_list_gridView_CellContentClick;
             // 
             // FormDashboardView
             // 

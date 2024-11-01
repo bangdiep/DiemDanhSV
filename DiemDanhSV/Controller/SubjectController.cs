@@ -19,10 +19,10 @@ namespace DiemDanhSV.Controller
 
         public bool addSubject(Subject subject)
         {
-            if (subject.SubjectId == null)
+            if (subject.SubjectId == "")
             {
                 throw new Exception("Subject ID cannot be null!");
-            } else if (subject.SubjectName == null)
+            } else if (subject.SubjectName == "")
             {
                 throw new Exception("Subject Name cannot be null");
             }

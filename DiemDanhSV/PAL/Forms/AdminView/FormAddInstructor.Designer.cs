@@ -35,13 +35,13 @@
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             btnSelect = new Guna.UI2.WinForms.Guna2Button();
-            list_student_gridView = new Guna.UI2.WinForms.Guna2DataGridView();
+            list_instructor_gridView = new Guna.UI2.WinForms.Guna2DataGridView();
             columnStdId = new DataGridViewTextBoxColumn();
             columnName = new DataGridViewTextBoxColumn();
             columnUsername = new DataGridViewTextBoxColumn();
             columnPwd = new DataGridViewTextBoxColumn();
             columnEmail = new DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)list_student_gridView).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)list_instructor_gridView).BeginInit();
             SuspendLayout();
             // 
             // guna2HtmlLabel1
@@ -76,11 +76,11 @@
             btnSelect.Text = "Select file Excel";
             btnSelect.Click += btnSelect_Click;
             // 
-            // list_student_gridView
+            // list_instructor_gridView
             // 
             dataGridViewCellStyle1.BackColor = Color.White;
-            list_student_gridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            list_student_gridView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            list_instructor_gridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            list_instructor_gridView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
@@ -88,10 +88,10 @@
             dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            list_student_gridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            list_student_gridView.ColumnHeadersHeight = 17;
-            list_student_gridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            list_student_gridView.Columns.AddRange(new DataGridViewColumn[] { columnStdId, columnName, columnUsername, columnPwd, columnEmail });
+            list_instructor_gridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            list_instructor_gridView.ColumnHeadersHeight = 17;
+            list_instructor_gridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            list_instructor_gridView.Columns.AddRange(new DataGridViewColumn[] { columnStdId, columnName, columnUsername, columnPwd, columnEmail });
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
@@ -99,37 +99,37 @@
             dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            list_student_gridView.DefaultCellStyle = dataGridViewCellStyle3;
-            list_student_gridView.GridColor = Color.FromArgb(231, 229, 255);
-            list_student_gridView.Location = new Point(12, 52);
-            list_student_gridView.Margin = new Padding(3, 4, 3, 4);
-            list_student_gridView.Name = "list_student_gridView";
-            list_student_gridView.RowHeadersVisible = false;
-            list_student_gridView.RowHeadersWidth = 51;
-            list_student_gridView.RowTemplate.Height = 25;
-            list_student_gridView.Size = new Size(721, 465);
-            list_student_gridView.TabIndex = 16;
-            list_student_gridView.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
-            list_student_gridView.ThemeStyle.AlternatingRowsStyle.Font = null;
-            list_student_gridView.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
-            list_student_gridView.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
-            list_student_gridView.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
-            list_student_gridView.ThemeStyle.BackColor = Color.White;
-            list_student_gridView.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
-            list_student_gridView.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
-            list_student_gridView.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
-            list_student_gridView.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
-            list_student_gridView.ThemeStyle.HeaderStyle.ForeColor = Color.White;
-            list_student_gridView.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            list_student_gridView.ThemeStyle.HeaderStyle.Height = 17;
-            list_student_gridView.ThemeStyle.ReadOnly = false;
-            list_student_gridView.ThemeStyle.RowsStyle.BackColor = Color.White;
-            list_student_gridView.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            list_student_gridView.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
-            list_student_gridView.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
-            list_student_gridView.ThemeStyle.RowsStyle.Height = 25;
-            list_student_gridView.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            list_student_gridView.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            list_instructor_gridView.DefaultCellStyle = dataGridViewCellStyle3;
+            list_instructor_gridView.GridColor = Color.FromArgb(231, 229, 255);
+            list_instructor_gridView.Location = new Point(12, 52);
+            list_instructor_gridView.Margin = new Padding(3, 4, 3, 4);
+            list_instructor_gridView.Name = "list_instructor_gridView";
+            list_instructor_gridView.RowHeadersVisible = false;
+            list_instructor_gridView.RowHeadersWidth = 51;
+            list_instructor_gridView.RowTemplate.Height = 25;
+            list_instructor_gridView.Size = new Size(721, 465);
+            list_instructor_gridView.TabIndex = 16;
+            list_instructor_gridView.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
+            list_instructor_gridView.ThemeStyle.AlternatingRowsStyle.Font = null;
+            list_instructor_gridView.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
+            list_instructor_gridView.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
+            list_instructor_gridView.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
+            list_instructor_gridView.ThemeStyle.BackColor = Color.White;
+            list_instructor_gridView.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
+            list_instructor_gridView.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
+            list_instructor_gridView.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            list_instructor_gridView.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
+            list_instructor_gridView.ThemeStyle.HeaderStyle.ForeColor = Color.White;
+            list_instructor_gridView.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            list_instructor_gridView.ThemeStyle.HeaderStyle.Height = 17;
+            list_instructor_gridView.ThemeStyle.ReadOnly = false;
+            list_instructor_gridView.ThemeStyle.RowsStyle.BackColor = Color.White;
+            list_instructor_gridView.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            list_instructor_gridView.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
+            list_instructor_gridView.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
+            list_instructor_gridView.ThemeStyle.RowsStyle.Height = 25;
+            list_instructor_gridView.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            list_instructor_gridView.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             // 
             // columnStdId
             // 
@@ -157,7 +157,7 @@
             // 
             // columnEmail
             // 
-            columnEmail.HeaderText = "Email";
+            columnEmail.HeaderText = "Degree";
             columnEmail.MinimumWidth = 6;
             columnEmail.Name = "columnEmail";
             // 
@@ -166,13 +166,13 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(745, 530);
-            Controls.Add(list_student_gridView);
+            Controls.Add(list_instructor_gridView);
             Controls.Add(guna2HtmlLabel1);
             Controls.Add(btnSelect);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormAddInstructor";
             Text = "FormAddInstructor";
-            ((System.ComponentModel.ISupportInitialize)list_student_gridView).EndInit();
+            ((System.ComponentModel.ISupportInitialize)list_instructor_gridView).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -181,7 +181,7 @@
 
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2Button btnSelect;
-        private Guna.UI2.WinForms.Guna2DataGridView list_student_gridView;
+        private Guna.UI2.WinForms.Guna2DataGridView list_instructor_gridView;
         private DataGridViewTextBoxColumn columnStdId;
         private DataGridViewTextBoxColumn columnName;
         private DataGridViewTextBoxColumn columnUsername;

@@ -10,13 +10,13 @@ namespace DiemDanhSV.Models
     internal class Classes
     {
         private string classID;
-        private string type;
+        private int type;
         private string room;
         private string term;
         private string teacher;
         private string subject;
         private string shift;
-        private string formLink = "";
+        private string formLink;
 
         public string ClassID
         {
@@ -24,7 +24,7 @@ namespace DiemDanhSV.Models
             set { classID = value; }
         }
 
-        public string Type
+        public int Type
         {
             get { return type; }
             set { type = value; }
@@ -61,7 +61,7 @@ namespace DiemDanhSV.Models
             set { formLink = value; }
         }
 
-        public Classes(string id, string type, string room, string term, string teacher, string subject, string shift)
+        public Classes(string id, int type, string room, string term, string teacher, string subject, string shift)
         {
             this.classID = id;
             this.type = type;
@@ -70,13 +70,14 @@ namespace DiemDanhSV.Models
             this.teacher = teacher;
             this.subject = subject;
             this.shift = shift;
+            this.formLink = "";
         }
 
         public static Classes FromDataReader(MySqlDataReader reader)
         {
             return new Classes(
                 reader.GetString("classID"),
-                reader.GetString("Ctype"),
+                reader.GetInt32("Ctype"),
                 reader.GetString("room"),
                 reader.GetString("term"),
                 reader.GetString("tcID"),

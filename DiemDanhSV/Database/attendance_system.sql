@@ -43,7 +43,7 @@ create table Shifts (
 
 create table Class (
     classID char(8),
-    Ctype varchar(6),
+    Ctype int,
     room varchar(5),
     term varchar(10),
     tcID char(8),

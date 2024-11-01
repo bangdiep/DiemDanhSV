@@ -63,7 +63,7 @@ namespace DiemDanhSV.Controller
             return users;
         }
 
-        public bool? addStudent(Student student)
+        public bool addStudent(Student student)
         {
             // add user 
             bool addUser = usersRepository.adddUser((Users) student);
@@ -76,7 +76,7 @@ namespace DiemDanhSV.Controller
                 return addStudent;
             } else
             {
-                return null;
+                return false;
             }
         }
 
@@ -84,8 +84,8 @@ namespace DiemDanhSV.Controller
         {
             foreach (Student std in students)
             {
-                bool? result = this.addStudent(std);
-                if (result == null)
+                bool result = this.addStudent(std);
+                if (result == false)
                 {
                     throw new Exception($"Cannot add student with ID: {std.UserID}");
                 }

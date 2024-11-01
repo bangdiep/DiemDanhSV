@@ -1,6 +1,7 @@
 ﻿using ClosedXML.Excel;
 using DiemDanhSV.Database;
 using DiemDanhSV.Models;
+using Microsoft.VisualBasic.ApplicationServices;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -70,7 +71,29 @@ namespace DiemDanhSV.Repository
             }
         }
 
-        
+        public bool addClass(Classes cls)
+        {
+            using (MySqlConnection connection = DatabaseConnection.GetConnection())
+            {
+                string query = "INSERT INTO Class (classID, Ctype, room, term, tcID, sjID, shID, formLink) VALUES " +
+                    "(@cID, @type, @room, @term, @instructor, @subject, @shift, @link);";
+
+                using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("@cID", cls.ClassID);
+                    cmd.Parameters.AddWithValue("@type", cls.Type);
+                    cmd.Parameters.AddWithValue("@room", cls.Room);
+                    cmd.Parameters.AddWithValue("@term", cls.Term);
+                    cmd.Parameters.AddWithValue("@instructor", cls.Teacher);
+                    cmd.Parameters.AddWithValue("@subject", cls.Subject);
+                    cmd.Parameters.AddWithValue("@shift", cls.Shift);
+                    cmd.Parameters.AddWithValue("@link", cls.FromLink);
+
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    return rowsAffected > 0;
+                }
+            }
+        }
 
 
     }
