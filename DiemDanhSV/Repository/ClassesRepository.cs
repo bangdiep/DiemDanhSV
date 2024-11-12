@@ -5,6 +5,7 @@ using Microsoft.VisualBasic.ApplicationServices;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,7 +14,7 @@ namespace DiemDanhSV.Repository
 {
     internal class ClassesRepository
     {
-        public List<StudentClassInfo> getAllStudetClassId(string id)
+        public List<StudentClassInfo> getAllStudentClassId(string id)
         {
             List<StudentClassInfo> info = new List<StudentClassInfo>();
             using (MySqlConnection connection = DatabaseConnection.GetConnection())
@@ -100,7 +101,7 @@ namespace DiemDanhSV.Repository
             DataTable dt = new DataTable();
             using (MySqlConnection connection = DatabaseConnection.GetConnection())
             {
-                string query = "SELECT Class.classID, Subjects.subjectName, Class.Ctype, Class.term FROM Class JOIN Subjects ON Class.sjID = Subjects.subID WHERE Class.tcID = @inID;";
+                string query = "SELECT Class.classID, Subjects.subjectName, Class.room, Class.Ctype, Class.term FROM Class JOIN Subjects ON Class.sjID = Subjects.subID WHERE Class.tcID = @inID;";
 
                 using (MySqlCommand cmd = new MySqlCommand(query, connection))
                 {
@@ -132,6 +133,52 @@ namespace DiemDanhSV.Repository
             }
 
             return link;
+        }
+
+        public Classes getClassByID(string classID)
+        {
+            using (MySqlConnection connection = DatabaseConnection.GetConnection())
+            {
+                string query = "SELECT * FROM Class WHERE classID = @classID;";
+                using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("@classID", classID);
+
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            int Ctype = reader.GetInt32("Ctype"); // Hoặc dùng reader["Ctype"] nếu cần kiểm tra null
+                            string room = reader.GetString("room");
+                            string term = reader.GetString("term");
+                            string tcID = reader.GetString("tcID");
+                            string sjID = reader.GetString("sjID");
+                            string shID = reader.GetString("shID");
+
+                            return new Classes(classID, Ctype, room, term, tcID, sjID, shID);
+                        }
+                    }
+                }
+            }
+
+            // Nếu không tìm thấy lớp với classID, trả về null hoặc xử lý theo yêu cầu của bạn
+            return null;
+        }
+
+
+        public bool updateLinkForm(string classID, string formLink)
+        {
+            using (MySqlConnection connection = DatabaseConnection.GetConnection())
+            {
+                string query = "UPDATE Class SET formLink = @formLink WHERE classID = @classID;";
+                using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("@classID", classID);
+                    cmd.Parameters.AddWithValue("@formLink", formLink);
+                    int rowEffect = cmd.ExecuteNonQuery();
+                    return rowEffect > 0;
+                }
+            }
         }
 
     }

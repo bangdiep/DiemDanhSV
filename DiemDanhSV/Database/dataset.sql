@@ -4,7 +4,7 @@ use attendance_system;
 INSERT INTO Users (userID, fullName, userName, passwords, email, gender, roles)
 VALUES 
     ('admin001', 'Admin', 'admin', 'admin123', 'admin@gmail.com', 'Male', 0),
-    ('52200210', 'Tang Duy Hao', 'haotang', '12345', '52200210@student.tdtu.edu.vn', 'Male', 1),
+    ('52200210', 'Tang Duy Hao', 'haotang', '12345', '52200210@student.tdtu.edu.vn', 'Male',2),
     ('52200238', 'Diep Truong Khanh Bang', 'bangdiep', '12345', '52200238@student.tdtu.edu.vn', 'Female', 2),
     ('52200243', 'Ho Bao Ngan', 'nganho', '12345', '52200243@student.tdtu.edu.vn', 'Female', 2);
 
@@ -34,10 +34,10 @@ VALUES
     ('S04', '15:25:00', '17:55:00');
 
 -- Thêm data mẫu vào bảng Class
-INSERT INTO Class (classID, Ctype, room, term, tcID, sjID, shID)
+INSERT INTO Class (classID, Ctype, room, term, tcID, sjID, shID, formLink)
 VALUES 
-    ('50204501', 'Ly thuyet', 'C0301', 'HK1-24-25', '52200210', '502045', 'S03'),
-    ('50204502', 'Thuc hanh', 'A0508', 'HK1-24-25', '52200210', '502045', 'S04');
+    ('50204501', 0, 'C0301', 'HK1-24-25', '52200210', '502045', 'S03', ''),
+    ('50204502', 1, 'A0508', 'HK1-24-25', '52200210', '502045', 'S04', '');
 
 -- Thêm data mẫu vào bảng Lists
 INSERT INTO Lists (stdID, cID, term)
@@ -56,4 +56,6 @@ VALUES
 INSERT INTO Attendance (stdID, cID, timeAttend)
 VALUES 
     ('52200238', '50204501', '2024:10:10 13:00:00'),
-    ('52200243', '50204501', '2024:10:12 15:16:00');
+    ('52200243', '50204501', '2024:10:12 15:16:00'),
+    ('52200243', '50204501', '2024:10:22 14:16:00'),
+    ('52200210', '50204502', '2024:10:12 16:16:00');

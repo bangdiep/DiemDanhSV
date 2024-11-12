@@ -69,7 +69,7 @@ create table Attendance (
     stdID char(8),
     cID char(8),
     timeAttend datetime,
-    constraint Pk_at primary key (stdID, cID),
+    constraint Pk_at primary key (stdID, cID, timeAttend),
     constraint Fk_at_c foreign key (cID) references Class(classID),
     constraint Fk_at_st foreign key (stdID) references Student(stdID)
 );
@@ -83,3 +83,16 @@ create table Subject_Shift (
     constraint Fk_ss_sj foreign key (subID) references Subjects(subID),
     constraint Fk_ss_sh foreign key (shID) references Shifts(shiftID)
 );
+
+-- Add admin account
+INSERT INTO Users (userID, fullName, userName, passwords, email, gender, roles)
+VALUES 
+    ('admin001', 'Admin', 'admin', 'admin123', 'admin@gmail.com', 'Male', 0);
+
+-- Add Shift
+INSERT INTO Shifts (shiftID, timeStart, timeEnd)
+VALUES 
+    ('S01', '06:50:00', '09:20:00'),
+    ('S02', '09:30:00', '11:50:00'),
+    ('S03', '12:45:00', '15:15:00'),
+    ('S04', '15:25:00', '17:55:00');

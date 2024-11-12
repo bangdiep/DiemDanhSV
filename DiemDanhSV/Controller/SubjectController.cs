@@ -28,5 +28,10 @@ namespace DiemDanhSV.Controller
             }
             return subjectRepository.AddSubject(subject);
         }
+
+        public Subject getSubjectByID(string id)
+        {
+            return subjectRepository.getSubjectByID(id);
+        }
     }
 }

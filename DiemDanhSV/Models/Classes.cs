@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DiemDanhSV.Models
 {
-    internal class Classes
+    public class Classes
     {
         private string classID;
         private int type;

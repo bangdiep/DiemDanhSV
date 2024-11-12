@@ -28,19 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             btnLogout = new Guna.UI2.WinForms.Guna2Button();
             btnDashboard = new Guna.UI2.WinForms.Guna2Button();
@@ -55,8 +57,12 @@
             Subject_list_gridView = new Guna.UI2.WinForms.Guna2DataGridView();
             ColumnSubject = new DataGridViewTextBoxColumn();
             columnClassCode = new DataGridViewTextBoxColumn();
+            columnRoom = new DataGridViewTextBoxColumn();
             columnType = new DataGridViewTextBoxColumn();
             columnTerm = new DataGridViewTextBoxColumn();
+            columnStudentList = new DataGridViewButtonColumn();
+            ColumnEdit = new DataGridViewButtonColumn();
+            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             guna2Panel2.SuspendLayout();
@@ -69,15 +75,16 @@
             // guna2Panel1
             // 
             guna2Panel1.BackColor = SystemColors.ControlLightLight;
+            guna2Panel1.Controls.Add(guna2Button1);
             guna2Panel1.Controls.Add(btnLogout);
             guna2Panel1.Controls.Add(btnDashboard);
             guna2Panel1.Controls.Add(pictureBox1);
-            guna2Panel1.CustomizableEdges = customizableEdges5;
+            guna2Panel1.CustomizableEdges = customizableEdges7;
             guna2Panel1.Dock = DockStyle.Left;
             guna2Panel1.Location = new Point(0, 0);
             guna2Panel1.Margin = new Padding(3, 4, 3, 4);
             guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges8;
             guna2Panel1.Size = new Size(193, 600);
             guna2Panel1.TabIndex = 2;
             // 
@@ -86,7 +93,7 @@
             btnLogout.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             btnLogout.CustomImages.Image = Properties.Resources.out_log_icon_218015;
             btnLogout.CustomImages.ImageAlign = HorizontalAlignment.Left;
-            btnLogout.CustomizableEdges = customizableEdges1;
+            btnLogout.CustomizableEdges = customizableEdges3;
             btnLogout.DisabledState.BorderColor = Color.DarkGray;
             btnLogout.DisabledState.CustomBorderColor = Color.DarkGray;
             btnLogout.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -99,7 +106,7 @@
             btnLogout.Location = new Point(14, 541);
             btnLogout.Margin = new Padding(3, 4, 3, 4);
             btnLogout.Name = "btnLogout";
-            btnLogout.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnLogout.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnLogout.Size = new Size(153, 43);
             btnLogout.TabIndex = 4;
             btnLogout.Text = "Log out";
@@ -110,7 +117,7 @@
             // 
             btnDashboard.CustomImages.Image = Properties.Resources._1904661_building_dashboard_default_home_house_page_start_122511__1_;
             btnDashboard.CustomImages.ImageAlign = HorizontalAlignment.Left;
-            btnDashboard.CustomizableEdges = customizableEdges3;
+            btnDashboard.CustomizableEdges = customizableEdges5;
             btnDashboard.DisabledState.BorderColor = Color.DarkGray;
             btnDashboard.DisabledState.CustomBorderColor = Color.DarkGray;
             btnDashboard.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -123,11 +130,12 @@
             btnDashboard.Location = new Point(14, 152);
             btnDashboard.Margin = new Padding(3, 4, 3, 4);
             btnDashboard.Name = "btnDashboard";
-            btnDashboard.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnDashboard.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnDashboard.Size = new Size(176, 43);
             btnDashboard.TabIndex = 2;
             btnDashboard.Text = "Dashboard";
             btnDashboard.TextOffset = new Point(1, 0);
+            btnDashboard.Click += btnDashboard_Click;
             // 
             // pictureBox1
             // 
@@ -144,12 +152,12 @@
             // 
             guna2Panel2.BackColor = Color.LightCoral;
             guna2Panel2.Controls.Add(panel1);
-            guna2Panel2.CustomizableEdges = customizableEdges9;
+            guna2Panel2.CustomizableEdges = customizableEdges11;
             guna2Panel2.Dock = DockStyle.Top;
             guna2Panel2.Location = new Point(193, 0);
             guna2Panel2.Margin = new Padding(3, 4, 3, 4);
             guna2Panel2.Name = "guna2Panel2";
-            guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges12;
             guna2Panel2.Size = new Size(728, 67);
             guna2Panel2.TabIndex = 3;
             // 
@@ -180,7 +188,7 @@
             // comboboxTerm
             // 
             comboboxTerm.BackColor = Color.Transparent;
-            comboboxTerm.CustomizableEdges = customizableEdges7;
+            comboboxTerm.CustomizableEdges = customizableEdges9;
             comboboxTerm.DrawMode = DrawMode.OwnerDrawFixed;
             comboboxTerm.DropDownStyle = ComboBoxStyle.DropDownList;
             comboboxTerm.FillColor = Color.LightCoral;
@@ -192,7 +200,7 @@
             comboboxTerm.Location = new Point(15, 7);
             comboboxTerm.Margin = new Padding(3, 4, 3, 4);
             comboboxTerm.Name = "comboboxTerm";
-            comboboxTerm.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            comboboxTerm.ShadowDecoration.CustomizableEdges = customizableEdges10;
             comboboxTerm.Size = new Size(102, 36);
             comboboxTerm.TabIndex = 3;
             // 
@@ -228,7 +236,10 @@
             // 
             // Subject_list_gridView
             // 
+            Subject_list_gridView.AllowUserToAddRows = false;
             Subject_list_gridView.AllowUserToDeleteRows = false;
+            Subject_list_gridView.AllowUserToResizeColumns = false;
+            Subject_list_gridView.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = Color.White;
             Subject_list_gridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -239,9 +250,9 @@
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             Subject_list_gridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            Subject_list_gridView.ColumnHeadersHeight = 17;
+            Subject_list_gridView.ColumnHeadersHeight = 25;
             Subject_list_gridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            Subject_list_gridView.Columns.AddRange(new DataGridViewColumn[] { ColumnSubject, columnClassCode, columnType, columnTerm });
+            Subject_list_gridView.Columns.AddRange(new DataGridViewColumn[] { ColumnSubject, columnClassCode, columnRoom, columnType, columnTerm, columnStudentList, ColumnEdit });
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
@@ -259,6 +270,7 @@
             Subject_list_gridView.RowHeadersVisible = false;
             Subject_list_gridView.RowHeadersWidth = 51;
             Subject_list_gridView.RowTemplate.Height = 25;
+            Subject_list_gridView.RowTemplate.Resizable = DataGridViewTriState.True;
             Subject_list_gridView.Size = new Size(728, 533);
             Subject_list_gridView.TabIndex = 7;
             Subject_list_gridView.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
@@ -273,7 +285,7 @@
             Subject_list_gridView.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
             Subject_list_gridView.ThemeStyle.HeaderStyle.ForeColor = Color.White;
             Subject_list_gridView.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            Subject_list_gridView.ThemeStyle.HeaderStyle.Height = 17;
+            Subject_list_gridView.ThemeStyle.HeaderStyle.Height = 25;
             Subject_list_gridView.ThemeStyle.ReadOnly = true;
             Subject_list_gridView.ThemeStyle.RowsStyle.BackColor = Color.White;
             Subject_list_gridView.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
@@ -286,35 +298,94 @@
             // 
             // ColumnSubject
             // 
+            ColumnSubject.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             ColumnSubject.DataPropertyName = "subjectName";
             ColumnSubject.HeaderText = "Subject";
             ColumnSubject.MinimumWidth = 6;
             ColumnSubject.Name = "ColumnSubject";
             ColumnSubject.ReadOnly = true;
+            ColumnSubject.Resizable = DataGridViewTriState.True;
             // 
             // columnClassCode
             // 
+            columnClassCode.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             columnClassCode.DataPropertyName = "ClassID";
             columnClassCode.HeaderText = "Class";
             columnClassCode.MinimumWidth = 6;
             columnClassCode.Name = "columnClassCode";
             columnClassCode.ReadOnly = true;
             // 
+            // columnRoom
+            // 
+            columnRoom.DataPropertyName = "room";
+            columnRoom.HeaderText = "Room";
+            columnRoom.MinimumWidth = 6;
+            columnRoom.Name = "columnRoom";
+            columnRoom.ReadOnly = true;
+            // 
             // columnType
             // 
+            columnType.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             columnType.DataPropertyName = "Ctype";
             columnType.HeaderText = "Type Class";
             columnType.MinimumWidth = 6;
             columnType.Name = "columnType";
             columnType.ReadOnly = true;
+            columnType.Visible = false;
             // 
             // columnTerm
             // 
+            columnTerm.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             columnTerm.DataPropertyName = "term";
             columnTerm.HeaderText = "Term";
             columnTerm.MinimumWidth = 6;
             columnTerm.Name = "columnTerm";
             columnTerm.ReadOnly = true;
+            // 
+            // columnStudentList
+            // 
+            columnStudentList.FlatStyle = FlatStyle.System;
+            columnStudentList.HeaderText = "Student List";
+            columnStudentList.MinimumWidth = 6;
+            columnStudentList.Name = "columnStudentList";
+            columnStudentList.ReadOnly = true;
+            columnStudentList.Resizable = DataGridViewTriState.True;
+            columnStudentList.Text = "View";
+            columnStudentList.UseColumnTextForButtonValue = true;
+            // 
+            // ColumnEdit
+            // 
+            ColumnEdit.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            ColumnEdit.HeaderText = "Edit";
+            ColumnEdit.MinimumWidth = 6;
+            ColumnEdit.Name = "ColumnEdit";
+            ColumnEdit.ReadOnly = true;
+            ColumnEdit.Text = "Edit";
+            ColumnEdit.UseColumnTextForButtonValue = true;
+            // 
+            // guna2Button1
+            // 
+            guna2Button1.CustomImages.Image = Properties.Resources._1904661_building_dashboard_default_home_house_page_start_122511__1_;
+            guna2Button1.CustomImages.ImageAlign = HorizontalAlignment.Left;
+            guna2Button1.CustomizableEdges = customizableEdges1;
+            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button1.FillColor = Color.Transparent;
+            guna2Button1.Font = new Font("Segoe UI", 9F);
+            guna2Button1.ForeColor = Color.Black;
+            guna2Button1.HoverState.FillColor = Color.FromArgb(255, 128, 128);
+            guna2Button1.HoverState.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2Button1.Location = new Point(11, 203);
+            guna2Button1.Margin = new Padding(3, 4, 3, 4);
+            guna2Button1.Name = "guna2Button1";
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2Button1.Size = new Size(176, 43);
+            guna2Button1.TabIndex = 5;
+            guna2Button1.Text = "Upload";
+            guna2Button1.TextOffset = new Point(1, 0);
+            guna2Button1.Click += guna2Button1_Click;
             // 
             // FormDashboardInstructor
             // 
@@ -356,7 +427,11 @@
         private Guna.UI2.WinForms.Guna2DataGridView Subject_list_gridView;
         private DataGridViewTextBoxColumn ColumnSubject;
         private DataGridViewTextBoxColumn columnClassCode;
+        private DataGridViewTextBoxColumn columnRoom;
         private DataGridViewTextBoxColumn columnType;
         private DataGridViewTextBoxColumn columnTerm;
+        private DataGridViewButtonColumn columnStudentList;
+        private DataGridViewButtonColumn ColumnEdit;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

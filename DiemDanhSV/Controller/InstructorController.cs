@@ -72,7 +72,7 @@ namespace DiemDanhSV.Controller
                     var password = "tdtu@123";
                     var email = row.Cell(3).GetString();
                     var gender = row.Cell(4).GetString();
-                    var roles = 2;
+                    var roles = 1;
                     var degree = row.Cell(5).GetString();
                     users.Add(new Instructor
                     {

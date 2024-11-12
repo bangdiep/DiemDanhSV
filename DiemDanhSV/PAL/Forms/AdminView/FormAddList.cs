@@ -12,18 +12,15 @@ using System.Windows.Forms;
 
 namespace DiemDanhSV.PAL.Forms.AdminView
 {
-    public partial class FormAddClass : Form
+    public partial class FormAddList : Form
     {
-        private ClassesController classesController;
-        public FormAddClass()
+        private readonly ListsController listsController;
+        private readonly SubjectController subjectController;
+        public FormAddList()
         {
             InitializeComponent();
-            classesController = new ClassesController();
-        }
-
-        private void FormAddClass_Load(object sender, EventArgs e)
-        {
-            
+            listsController = new ListsController();
+            subjectController = new SubjectController();
         }
 
         private void btnSelect_Click(object sender, EventArgs e)
@@ -41,10 +38,10 @@ namespace DiemDanhSV.PAL.Forms.AdminView
                 {
                     this.Cursor = Cursors.WaitCursor;
                     // Đọc thông tin class từ file Excel
-                    var classes = classesController.ReadClassFromExcel(filePath);
+                    var lst = listsController.ReadListsFromExcel(filePath);
 
                     // Lưu thông tin class vào database
-                    classesController.addClassFromList(classes);
+                    listsController.addListsFromList(lst);
 
                     Task.Run(() =>
                     {
@@ -64,17 +61,19 @@ namespace DiemDanhSV.PAL.Forms.AdminView
 
         public void LoadData()
         {
-            List<Classes> classes = classesController.getAllClass();
+            List<Classes> classes = listsController.getAllClassExist();
 
             this.Invoke((MethodInvoker)delegate
             {
                 // Xóa các hàng hiện có (nếu cần)
-                list_class_gridView.Rows.Clear();
+                list_data_gridView.Rows.Clear();
 
                 // Thêm dữ liệu vào DataGridView
                 foreach (Classes cls in classes)
                 {
-                    list_class_gridView.Rows.Add(cls.ClassID, cls.Type, cls.Room, cls.Term, cls.Teacher, cls.Subject, cls.Shift);
+                    Subject sj = subjectController.getSubjectByID(cls.Subject);
+                    int total = listsController.getToTalStudentInClass(cls.ClassID);
+                    list_data_gridView.Rows.Add(sj.SubjectName, cls.ClassID, cls.Room, cls.Term, total);
                 }
 
                 this.Cursor = Cursors.Default;

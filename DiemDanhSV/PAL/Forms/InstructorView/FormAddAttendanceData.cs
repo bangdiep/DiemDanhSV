@@ -10,20 +10,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DiemDanhSV.PAL.Forms.AdminView
+namespace DiemDanhSV.PAL.Forms.InstructorView
 {
-    public partial class FormAddClass : Form
+    public partial class FormAddAttendanceData : Form
     {
-        private ClassesController classesController;
-        public FormAddClass()
+        private AttendanceController attendanceController;
+        private StudentController studentController;
+        public FormAddAttendanceData()
         {
             InitializeComponent();
-            classesController = new ClassesController();
-        }
-
-        private void FormAddClass_Load(object sender, EventArgs e)
-        {
-            
+            attendanceController = new AttendanceController();
+            studentController = new StudentController();
         }
 
         private void btnSelect_Click(object sender, EventArgs e)
@@ -41,10 +38,10 @@ namespace DiemDanhSV.PAL.Forms.AdminView
                 {
                     this.Cursor = Cursors.WaitCursor;
                     // Đọc thông tin class từ file Excel
-                    var classes = classesController.ReadClassFromExcel(filePath);
+                    var attend = attendanceController.ReadAttendanceFromExcel(filePath);
 
                     // Lưu thông tin class vào database
-                    classesController.addClassFromList(classes);
+                    attendanceController.addAttendanceFromList(attend);
 
                     Task.Run(() =>
                     {
@@ -62,23 +59,29 @@ namespace DiemDanhSV.PAL.Forms.AdminView
             }
         }
 
+
         public void LoadData()
         {
-            List<Classes> classes = classesController.getAllClass();
+            List<Attendance> classes = attendanceController.getAll();
 
             this.Invoke((MethodInvoker)delegate
             {
                 // Xóa các hàng hiện có (nếu cần)
-                list_class_gridView.Rows.Clear();
+                student_list_gridView.Rows.Clear();
 
                 // Thêm dữ liệu vào DataGridView
-                foreach (Classes cls in classes)
+                foreach (Attendance cls in classes)
                 {
-                    list_class_gridView.Rows.Add(cls.ClassID, cls.Type, cls.Room, cls.Term, cls.Teacher, cls.Subject, cls.Shift);
+                    student_list_gridView.Rows.Add(cls.StdID, cls.CID, cls.TimeAttend);
                 }
 
                 this.Cursor = Cursors.Default;
             });
+        }
+
+        private void FormAddAttendanceData_Load(object sender, EventArgs e)
+        {
+            LoadData();
         }
     }
 }

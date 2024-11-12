@@ -16,15 +16,19 @@ namespace DiemDanhSV.PAL.Forms.StudentView
     {
         private Users student;
         private ClassesController classesController;
+        private AttendanceController attendanceController;
         public FormDashBoardStudent(Users us)
         {
             InitializeComponent();
             this.student = us;
+            classesController = new ClassesController();
+            attendanceController = new AttendanceController();
         }
 
         public void LoadData()
         {
             List<StudentClassInfo> std_class = classesController.getStudentClassInfoByID(this.student.UserID);
+
 
 
             // Cập nhật DataGridView trên UI thread
@@ -36,7 +40,8 @@ namespace DiemDanhSV.PAL.Forms.StudentView
                 // Thêm dữ liệu vào DataGridView
                 foreach (StudentClassInfo u in std_class)
                 {
-                    Subject_list_gridView.Rows.Add(u.SubjectName, u.ClassID, u.ShiftID, 0);
+                    int total = attendanceController.getSuccessfullAttend(student.UserID, u.ClassID);
+                    Subject_list_gridView.Rows.Add(u.SubjectName, u.ClassID, u.ShiftID, total);
                 }
 
                 this.Cursor = Cursors.Default;

@@ -15,7 +15,7 @@ namespace DiemDanhSV.Controller
 
         public List<StudentClassInfo> getStudentClassInfoByID(string id)
         {
-            List<StudentClassInfo> info = classesRepository.getAllStudetClassId(id);
+            List<StudentClassInfo> info = classesRepository.getAllStudentClassId(id);
             return info;
         }
 
@@ -33,7 +33,7 @@ namespace DiemDanhSV.Controller
                 foreach (var row in worksheet.RangeUsed().RowsUsed().Skip(1)) // skip first row
                 {
                     string classID = row.Cell(1).GetString();
-                    var type = row.Cell(2);
+                    var type = row.Cell(2).GetValue<int>();
                     var room = row.Cell(3).GetString();
                     var term = row.Cell(4).GetString();
                     var teacher = row.Cell(5).GetString();
@@ -54,22 +54,33 @@ namespace DiemDanhSV.Controller
             return classes;
         }
 
-        //public bool? addClass(Classes cls)
-        //{
-            
-        //}
+        public bool addClass(Classes cls)
+        {
+            return classesRepository.addClass(cls);
+        }
 
-        //public bool addClassFromList(List<Classes> classes)
-        //{
-        //    foreach (Classes std in classes)
-        //    {
-        //        bool? result = this.addStudent(std);
-        //        if (result == null)
-        //        {
-        //            throw new Exception($"Cannot add student with ID: {std.UserID}");
-        //        }
-        //    }
-        //    return true;
-        //}
+        public bool addClassFromList(List<Classes> classes)
+        {
+            foreach (Classes cls in classes)
+            {
+                bool result = this.addClass(cls);
+                if (result == false)
+                {
+                    throw new Exception($"Cannot add class with ID: {cls.ClassID}");
+                }
+            }
+            return true;
+        }
+
+        public Classes getClassByID(string classID)
+        {
+
+            return classesRepository.getClassByID(classID);
+        }
+
+        public bool updateLinkForm(string classID, string linkForm)
+        {
+            return classesRepository.updateLinkForm(classID, linkForm);
+        }
     }
 }

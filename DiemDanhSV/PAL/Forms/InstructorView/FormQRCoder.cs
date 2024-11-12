@@ -14,7 +14,7 @@ namespace DiemDanhSV.PAL.Forms.InstructorView
 
         private void FormQRCoder_Load(object sender, EventArgs e)
         {
-            pictureBox1.Image = GenerateQRCode(link); 
+            pictureBox1.Image = GenerateQRCode(link);   
         }
         private Bitmap GenerateQRCode(string link)
         {

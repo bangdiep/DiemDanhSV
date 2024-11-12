@@ -114,18 +114,18 @@
             // 
             // ColumnTotal
             // 
-            ColumnTotal.HeaderText = "Total Absent";
+            ColumnTotal.HeaderText = "Total Attendance";
             ColumnTotal.MinimumWidth = 6;
             ColumnTotal.Name = "ColumnTotal";
             // 
-            // DashBoardStudent
+            // FormDashBoardStudent
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(752, 528);
             Controls.Add(Subject_list_gridView);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "DashBoardStudent";
+            Name = "FormDashBoardStudent";
             Text = "DashBoardStudent";
             ((System.ComponentModel.ISupportInitialize)Subject_list_gridView).EndInit();
             ResumeLayout(false);

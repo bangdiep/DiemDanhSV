@@ -105,7 +105,7 @@ namespace DiemDanhSV.PAL.Forms
         private void btnAddClass_Click(object sender, EventArgs e)
         {
             FormAddSubject addSubject = new FormAddSubject();
-            openChildFrom((Form) addSubject);
+            openChildFrom((Form)addSubject);
             Task.Run(() =>
             {
                 addSubject.LoadData();
@@ -155,6 +155,17 @@ namespace DiemDanhSV.PAL.Forms
             Task.Run(() =>
             {
                 addInstructor.LoadData();
+            });
+        }
+
+        private void btnAddList_Click(object sender, EventArgs e)
+        {
+            FormAddList addList = new FormAddList();
+            openChildFrom(addList);
+
+            Task.Run(() =>
+            {
+                addList.LoadData();
             });
         }
     }

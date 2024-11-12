@@ -51,5 +51,29 @@ namespace DiemDanhSV.Repository
                 return subjects;
             }
         }
+
+        public Subject getSubjectByID(string id)
+        {
+            using (MySqlConnection connection = DatabaseConnection.GetConnection())
+            {
+                string query = "SELECT * FROM Subjects WHERE subID = @id";
+
+                using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("@id", id);
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            return Subject.FromDataReader(reader);
+                        }
+                        else
+                        {
+                            return null;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

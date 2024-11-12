@@ -42,7 +42,7 @@ namespace DiemDanhSV.PAL.Forms
             openChildFrom((Form) stdDashBoard);
             Task.Run(() =>
             {
-
+                stdDashBoard.LoadData();
             });
 
         }

@@ -60,20 +60,53 @@ namespace DiemDanhSV.PAL.Forms
 
         private void Subject_list_gridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            string classID;
+            string Ctype;
+            ClassesController classesController = new ClassesController();
             if (e.ColumnIndex == Subject_list_gridView.Columns["ColumnSubject"].Index && e.RowIndex >= 0)
             {
                 // Lấy mã môn học từ ô tương ứng
-                string classID = Subject_list_gridView.Rows[e.RowIndex].Cells["columnClassCode"].Value.ToString() ?? string.Empty;
-                string Ctype = Subject_list_gridView.Rows[e.RowIndex].Cells["columnType"].Value.ToString() ?? string.Empty;
+                classID = Subject_list_gridView.Rows[e.RowIndex].Cells["columnClassCode"].Value.ToString() ?? string.Empty;
+                Ctype = Subject_list_gridView.Rows[e.RowIndex].Cells["columnType"].Value.ToString() ?? string.Empty;
 
-                if(int.Parse(Ctype) == 0) //Ly Thuyet
-                {
+
                     ClassesRepository classesRepository = new ClassesRepository();
-
                     LoadFormQRCoder(classesRepository.getLinkByClassID(classID));
-                }
 
             }
+            if (e.ColumnIndex == Subject_list_gridView.Columns["ColumnEdit"].Index && e.RowIndex >= 0)
+            {
+                classID = Subject_list_gridView.Rows[e.RowIndex].Cells["columnClassCode"].Value.ToString() ?? string.Empty;
+
+                LoadFormEditClass(classesController.getClassByID(classID));
+            }
+            if (e.ColumnIndex == Subject_list_gridView.Columns["columnStudentList"].Index && e.RowIndex >= 0)
+            {
+                classID = Subject_list_gridView.Rows[e.RowIndex].Cells["columnClassCode"].Value.ToString() ?? string.Empty;
+
+                LoadFormStudentList(classesController.getClassByID(classID));
+            }
+        }
+
+        private void LoadFormStudentList(Classes classes)
+        {
+            FormStudentList formStudentList = new FormStudentList(classes);
+            formStudentList.Dock = DockStyle.Fill;
+            formStudentList.TopLevel = false;
+            pn_formDBInst.Controls.Clear();
+            pn_formDBInst.Controls.Add(formStudentList);
+            formStudentList.Show();
+        }
+
+        private void LoadFormEditClass(Classes classes)
+        {
+            FormEditClass formEditClass = new FormEditClass(classes);
+            formEditClass.Dock = DockStyle.Fill;
+            formEditClass.TopLevel = false;
+            pn_formDBInst.Controls.Clear();
+            pn_formDBInst.Controls.Add(formEditClass);
+            formEditClass.Show();
+
         }
 
         private void LoadFormQRCoder(string link)
@@ -90,8 +123,42 @@ namespace DiemDanhSV.PAL.Forms
         {
             string inID = role.Text;
             ClassesRepository classesRepository = new ClassesRepository();
-
             Subject_list_gridView.DataSource = classesRepository.getDataClassByInID(inID);
+
+            LoadIndexOfColumn();
+        }
+
+        private void LoadIndexOfColumn()
+        {
+            Subject_list_gridView.Columns["columnClassCode"].DisplayIndex = 0;
+            Subject_list_gridView.Columns["ColumnSubject"].DisplayIndex = 1;
+            Subject_list_gridView.Columns["columnType"].DisplayIndex = 2;
+            Subject_list_gridView.Columns["columnRoom"].DisplayIndex = 3;
+            Subject_list_gridView.Columns["columnTerm"].DisplayIndex = 4;
+            Subject_list_gridView.Columns["ColumnEdit"].DisplayIndex = 5;
+        }
+
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            pn_formDBInst.Controls.Clear();
+            pn_formDBInst.Controls.Add(Subject_list_gridView);
+            LoadIndexOfColumn();
+            Subject_list_gridView.Show();
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            LoadFormAddAttendanceData();
+        }
+
+        private void LoadFormAddAttendanceData()
+        {
+            FormAddAttendanceData formAddAttendanceData = new FormAddAttendanceData();
+            formAddAttendanceData.Dock = DockStyle.Fill;
+            formAddAttendanceData.TopLevel = false;
+            pn_formDBInst.Controls.Clear();
+            pn_formDBInst.Controls.Add(formAddAttendanceData);
+            formAddAttendanceData.Show();
         }
     }
 }
